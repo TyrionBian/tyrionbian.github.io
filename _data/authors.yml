@@ -1,5 +1,5 @@
-default:                                                      # Fallback if nothing is specified
-  initial:      Tianliang                                       # used for author lookup in posts and for first two characters in the about page back button
+tianliang:                                                      # Fallback if nothing is specified
+  initial:      tianliang                                       # used for author lookup in posts and for first two characters in the about page back button
   name:         "Tianliang Bian"                               # used to display author name
   cover:        /assets/mountain-alternative-cover.jpg        # OPTIONAL: defines location of cover image in about page
   picture:      /assets/biantianliang.jpg                           # OPTIONAL: author picture
@@ -10,7 +10,7 @@ default:                                                      # Fallback if noth
   twitter:                                                    # OPTIONAL: used in the about page
   linkedin:                                                   # OPTIONAL: used in the about page
   xing:                                                       # OPTIONAL: used in the about page
-  github:                                                     # OPTIONAL: used in the about page
+  github:       tyrionbian                                              # OPTIONAL: used in the about page
   stackoverflow:                                              # OPTIONAL: used in the about page
   facebook:                                                   # OPTIONAL: used in the about page
   gplus:                                                      # OPTIONAL: used in the about page
