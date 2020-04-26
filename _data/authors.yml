@@ -2,7 +2,7 @@ tianliang:                                                      # Fallback if no
   initial:      TL                                       # used for author lookup in posts and for first two characters in the about page back button
   name:         "Tianliang Bian"                               # used to display author name
   cover:        /assets/mountain-alternative-cover.jpg        # OPTIONAL: defines location of cover image in about page
-  picture:      /assets/web-optim.png                           # OPTIONAL: author picture
+  picture:      /assets/biantianliang.jpg                           # OPTIONAL: author picture
   bio:          This is my blog!                               # OPTIONAL: text below author name in posts
   location:     China                                       # OPTIONAL: used to display location of the author
   website:                          						  # OPTIONAL: link to the author of a post
