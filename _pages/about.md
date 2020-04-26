@@ -13,5 +13,5 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 If you like me then please leave a star in the GitHub repository - Thank you!
 
 <p class="github-button-container">
-<a class="github-button" href="https://github.com/TyrionBian" data-size="large" data-show-count="true" aria-label="repositories of">TyrionBian</a>
+<a class="github-button" href="https://github.com/TyrionBian" data-size="large" data-show-count="true" aria-label="">TyrionBian</a>
 </p>
