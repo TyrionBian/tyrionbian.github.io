@@ -1,7 +1,7 @@
 ---
 layout:    about
 permalink: "/about"
-author:    Tianliang Bian
+author:    tianliang
 keywords:  about person demo example
 title:     About Tianliang Bian
 menutitle: About
