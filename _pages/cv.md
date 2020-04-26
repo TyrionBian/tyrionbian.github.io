@@ -1,9 +1,9 @@
 ---
 layout:    about
 permalink: "/cv"
-author:    jdecent
+author:    tianliang
 keywords:  about person demo example
-title:     Jekyll Decent CV
+title:     Tianliang Bian CV
 menutitle: CV
 weight:    70
 excerpt:   This page contains the curriculum vitae (CV) of the author.
