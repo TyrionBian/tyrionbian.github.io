@@ -10,6 +10,12 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 --- 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
+| Component | Description |
+| ---- | --- |
+| **email** | tianliang.bian@gmail.com |
+| **wechat** | btl316131763 |
+| **torch** | a Tensor library like NumPy, with strong GPU support |
+
 If you like me then please leave a star in the GitHub repository - Thank you!
 
 <p class="github-button-container">
