@@ -1,5 +1,5 @@
 tianliang:                                                      # Fallback if nothing is specified
-  initial:      tianliang                                       # used for author lookup in posts and for first two characters in the about page back button
+  initial:      TL                                       # used for author lookup in posts and for first two characters in the about page back button
   name:         "Tianliang Bian"                               # used to display author name
   cover:        /assets/mountain-alternative-cover.jpg        # OPTIONAL: defines location of cover image in about page
   picture:      /assets/web-optim.png                           # OPTIONAL: author picture
