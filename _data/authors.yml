@@ -23,13 +23,3 @@ default:                                                      # Fallback if noth
   twitch:                                                     # OPTIONAL: used in the about page
   s500px:                                                     # OPTIONAL: used in the about page
   reddit:                                                     # OPTIONAL: used in the about page
-Tianliang:
-  initial:      Tianliang
-  name:         "Tianliang Bian"       
-  cover:        /assets/mountain-alternative-cover.jpg  
-  picture:      /assets/biantianliang.jpg  
-  bio:          This is my blog!
-  location:     China
-  email:        "tianliang.bian@gmail.com"   
-  twitter:      "-"    
-  twitch:       "-"
