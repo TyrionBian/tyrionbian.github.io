@@ -16,6 +16,13 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 | **wechat** | btl316131763 |
 | **torch** | a Tensor library like NumPy, with strong GPU support |
 
+### References
+
+    [Bian, Tianliang. "An ensemble image quality assessment algorithm based on
+    deep feature clustering." Signal Processing: Image Communication 81 (2020): 115703.](https://doi.org/10.1016/j.image.2019.115703)
+    [(pdf)](/paper/An ensemble image quality assessment algorithm based on deep feature clustering.pdf)
+
+
 If you like me then please leave a star in the GitHub repository - Thank you!
 
 <p class="github-button-container">
