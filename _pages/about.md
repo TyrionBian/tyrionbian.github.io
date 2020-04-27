@@ -18,7 +18,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 
 ### Papers
 
-- [Fully Homomorphic Encryption -- CSE 206A: Lattice Algorithms and Applications, Fall 2017](https://doi.org/10.1016/j.image.2019.115703)
+- [Bian, Tianliang. "An ensemble image quality assessment algorithm based on deep feature clustering." Signal Processing: Image Communication 81 (2020): 115703](https://doi.org/10.1016/j.image.2019.115703)
     
     [pdf](/paper/An ensemble image quality assessment algorithm based on deep feature clustering.pdf)
 
