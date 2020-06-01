@@ -30,7 +30,7 @@ we can improve model performance, which is called feature engineering.
 
 ### Feature Selection
 
-In many cases, the most predictable model cannot be derived using all available functions in the data set.
+In many cases, the most predictable model cannot be derived using all available features in the data set.
 Depending on the type of model used, the size of the data set and various other factors (including too much functionality) may reduce the performance of the model.
 
 Feature selection has three main goals:
@@ -39,20 +39,25 @@ Feature selection has three main goals:
 - Reduce computing costs.
 - Produce a more interpretable model.
 
-There are many reasons that can cause you to delete certain functions without using others. 
+There are many reasons that can cause you to delete certain features without using others. 
 This includes the relationship between the elements, whether the statistical relationship with the target variable exists or is important enough, 
 or the value of the information contained in the element.
 
-### Manual function selection
+### Manual feature selection
 
 There are various reasons why you might want to remove features from the training phase. 
 These include:
-- A function highly related to another function in the data set. If this is the case, then both functions essentially provide the same information. Some algorithms are sensitive to related functions.
-Provides little or no information. An example is a function where most examples have the same value.
+- A feature highly related to another feature in the data set. If this is the case, then both features essentially provide the same information. Some algorithms are sensitive to related features.
+Provides little or no information. An example is a features where most examples have the same value.
 - Elements that have almost no statistical relationship with the target variable.
-- Features can be selected by performing data analysis before or after training the model. The following are some common techniques for manually performing function selection.
+- Features can be selected by performing data analysis before or after training the model. The following are some common techniques for manually performing feature selection.
 
 Feature selection can be performed manually by analyzing the data set before and after training, or by automatic statistical methods.
 
+### Correlation plot
+One manual technique for performing feature selection is to create visualizations that plot the relevant metrics for each feature in the dataset. [Seaborn](https://seaborn.pydata.org/) is a good python library. 
+The following code generates a correlation diagram of features in the breast cancer data set available from the scikit-learn API.
+
+In the final visualization, we can identify some closely related features. Therefore, we may want to delete some of these features and some features with very low correlation with the target variable. We may also want to delete these features.
 
 
