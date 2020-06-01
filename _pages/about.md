@@ -10,11 +10,11 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 --- 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-| Component | Description |
+| Contact details | Description |
 | ---- | --- |
 | **Email** | tianliang.bian@gmail.com |
 | **Wechat** | btl316131763 |
-| **Favour** | computer algorithms, Machine Learning |
+| **Skype Name** | live:tianliang.bian |
 
 ### Papers
 
