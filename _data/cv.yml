@@ -29,7 +29,7 @@ tianliang:
         - time:             "2016.06 - 2018.11"
           location:         "Beijing China"
           company:          "Mashang Consumer Finance Co. Ltd."
-          position:         "algorithm engineer"
+          position:         "Algorithm Engineer"
           responsibilities:
             - "Build credit risk model"
             - "Application of artificial intelligence algorithm"
