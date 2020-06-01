@@ -12,9 +12,9 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 
 | Component | Description |
 | ---- | --- |
-| **email** | tianliang.bian@gmail.com |
-| **wechat** | btl316131763 |
-| **torch** | a Tensor library like NumPy, with strong GPU support |
+| **Email** | tianliang.bian@gmail.com |
+| **Wechat** | btl316131763 |
+| **Favour** | computer algorithms, Machine Learning |
 
 ### Papers
 
@@ -24,5 +24,5 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 If you like me then please leave a star in the GitHub repository - Thank you!
 
 <p class="github-button-container">
-<a class="github-button" href="https://github.com/TyrionBian" data-size="large" data-show-count="true" aria-label="">TyrionBian</a>
+<a class="github-button" href="https://github.com/TyrionBian" data-size="large" data-show-count="false" aria-label="">TyrionBian</a>
 </p>
