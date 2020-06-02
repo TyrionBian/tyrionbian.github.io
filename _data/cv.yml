@@ -34,14 +34,6 @@ tianliang:
             - "Build credit risk model"
             - "Application of artificial intelligence algorithm"
     projects:
-        - time:             "24 Sep 2017"
-          title:            "test"
-          describe:         "test"
-          technologies:     "python, tensorflow, nltk"
-          responsibilities:
-            - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet finibus libero sed ullamcorper. Donec."
-            - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed."
-            - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sodales ligula sit amet nisl pellentesque, eu cursus neque."
         - time:             "15 Jun 2018"
           title:            "tfidf_xgb"
           url:              "https://github.com/TyrionBian/tfidf_xgb"
