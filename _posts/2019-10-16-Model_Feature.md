@@ -59,6 +59,36 @@ Feature selection can be performed manually by analyzing the data set before and
 One manual technique for performing feature selection is to create visualizations that plot the relevant metrics for each feature in the dataset. [Seaborn](https://seaborn.pydata.org/) is a good python library. 
 The following code generates a correlation diagram of features in the breast cancer data set available from the scikit-learn API.
 
+```python
+# library imports
+import pandas as pd
+from sklearn.datasets import load_breast_cancer
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+import numpy as np
+# load the breast_cancer data set from the scikit-learn api
+breast_cancer = load_breast_cancer()
+data = pd.DataFrame(data=breast_cancer['data'], columns = breast_cancer['feature_names'])
+data['target'] = breast_cancer['target']
+data.head()
+# use the pands .corr() function to compute pairwise correlations for the dataframe
+corr = data.corr()
+# visualise the data with seaborn
+mask = np.triu(np.ones_like(corr, dtype=np.bool))
+sns.set_style(style = 'white')
+f, ax = plt.subplots(figsize=(11, 9))
+cmap = sns.diverging_palette(10, 250, as_cmap=True)
+sns.heatmap(corr, mask=mask, cmap=cmap, 
+        square=True,
+        linewidths=.5, cbar_kws={"shrink": .5}, ax=ax)
+```
+ 
+```
+No language indicated, so no syntax highlighting. 
+But let's throw in a <b>tag</b>.
+```
+
 In the final visualization, we can identify some closely related features. Therefore, we may want to delete some of these features and some features with very low correlation with the target variable. We may also want to delete these features.
 
 There are many tools and techniques that can be used to determine the importance of functionality. Some technologies are unique to specific algorithms, while others can be applied to various models and are called agnostic models.
