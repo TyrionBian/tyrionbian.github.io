@@ -8,6 +8,8 @@ menutitle: CV
 weight:    70
 excerpt:   This page contains the curriculum vitae (CV) of the author.
 ---
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
 {% assign cv = site.data.cv[page.author] %}
 
 <div class="md-card no-border">
@@ -70,9 +72,6 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 <div class="md-card shadow project">
     <div class="meta">
         <div class="team" style="cursor: pointer;" onclick="window.location='{{project.url}}';">git address</div>
-        <p class="github-button-container">
-            <a class="github-button" href="{{project.url}}" data-size="large" data-show-count="false" aria-label="">gitaddress</a>
-        </p>
         <div class="time">{{project.time}}</div>
     </div>
     <div class="content">
@@ -91,6 +90,9 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
             {% endfor %}
         </ul>
         <span class="icon-briefcase"></span>
+        <p class="github-button-container">
+            <a class="github-button" href="https://github.com/TyrionBian" data-size="large" data-show-count="false" aria-label="">TyrionBian</a>
+        </p>
     </div>
 </div>
 {% endfor %}
