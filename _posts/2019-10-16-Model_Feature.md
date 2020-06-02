@@ -87,7 +87,7 @@ sns.heatmap(corr, mask=mask, cmap=cmap,
 In the final visualization, we can identify some closely related features. Therefore, we may want to delete some of these features and some features with very low correlation with the target variable. We may also want to delete these features.
 
 <figure>
-<img src="{{ "/iamges/1_OOI-G2W1jxh8SGcHWwx_ZQ.png" | absolute_url }}" />
+<img src="{{ "/images/1_OOI-G2W1jxh8SGcHWwx_ZQ.png" | absolute_url }}" />
 <figcaption>Correlation plot</figcaption>
 </figure>
 
