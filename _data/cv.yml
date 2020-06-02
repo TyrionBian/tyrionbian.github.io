@@ -35,7 +35,6 @@ tianliang:
             - "Application of artificial intelligence algorithm"
     projects:
         - time:             "24 Sep 2017"
-          team:             "Team of 2"
           title:            "Chatbot-udc"
           url:              "https://github.com/TyrionBian/chatbot-udc"
           describe:         "chatbot for ubuntu dialogue corpus"
