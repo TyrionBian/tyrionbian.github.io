@@ -99,3 +99,24 @@ There are many tools and techniques that can be used to determine feature import
 
 To illustrate feature importance, I will use the built-in feature importance method for the random forest classifier in scikit-learn. The following code fits the classifier and creates a graph showing the importance of the features.
 
+```python
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+# Spliiting data into test and train sets
+X_train, X_test, y_train, y_test = train_test_split(data.drop('target', axis=1), data['target'], test_size=0.20, random_state=0)
+# fitting the model
+model = RandomForestClassifier(n_estimators=500, n_jobs=-1, random_state=42)
+model.fit(X_train, y_train)
+# plotting feature importances
+features = data.drop('target', axis=1).columns
+importances = model.feature_importances_
+indices = np.argsort(importances)
+plt.figure(figsize=(10,15))
+plt.title('Feature Importances')
+plt.barh(range(len(indices)), importances[indices], color='b', align='center')
+plt.yticks(range(len(indices)), [features[i] for i in indices])
+plt.xlabel('Relative Importance')
+plt.show()
+```
+
