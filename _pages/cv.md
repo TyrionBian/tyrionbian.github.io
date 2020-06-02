@@ -89,9 +89,8 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
             <li> {{ technology }}</li>
             {% endfor %}
         </ul>
-        <span class="icon-briefcase"></span>
         <p class="github-button-container">
-            <a class="github-button" href="https://github.com/TyrionBian" data-size="large" data-show-count="false" aria-label="">TyrionBian</a>
+            <a class="github-button" href="{{project.url}}" data-size="large" data-show-count="true" aria-label="">git address</a>
         </p>
     </div>
 </div>
