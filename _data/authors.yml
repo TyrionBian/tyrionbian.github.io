@@ -3,7 +3,7 @@ tianliang:                                                      # Fallback if no
   name:         "Tianliang Bian"                               # used to display author name
   cover:        /assets/mountain-alternative-cover.jpg        # OPTIONAL: defines location of cover image in about page
   picture:      /assets/biantianliang.jpg                           # OPTIONAL: author picture
-  bio:          This is my blog!                               # OPTIONAL: text below author name in posts
+  bio:          坐井观天                               # OPTIONAL: text below author name in posts
   location:     China                                       # OPTIONAL: used to display location of the author
   website:      "https://tyrionbian.github.io/"                    						  # OPTIONAL: link to the author of a post
   email:        tianliang.bian@gmail.com                      # OPTIONAL: used in the about page
