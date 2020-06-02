@@ -71,7 +71,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
 {% for project in cv.projects %}
 <div class="md-card shadow project">
     <div class="meta">
-        <div class="team" style="cursor: pointer;" onclick="window.location='{{project.url}}';">git address</div>
+        <div class="team">{{project.team}}</div>
         <div class="time">{{project.time}}</div>
     </div>
     <div class="content">
@@ -90,7 +90,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
             {% endfor %}
         </ul>
         <p class="github-button-container">
-            <a class="github-button" href="{{project.url}}" data-size="large" data-show-count="true" aria-label="">git address</a>
+            <a class="github-button" href="{{project.url}}" data-size="large" data-show-count="true" aria-label="">{{project.title}}</a>
         </p>
     </div>
 </div>
