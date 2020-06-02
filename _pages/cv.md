@@ -78,6 +78,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     </div>
     <div class="content">
         <h2>{{project.title}}</h2>
+        <div class="team">{{project.describe}}</div>
         <ul>
             {% for responsibility in project.responsibilities %}
             <li>{{responsibility}}</li>
@@ -91,9 +92,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
             <li> {{ technology }}</li>
             {% endfor %}
         </ul>
-        <p class="github-button-container">
-            <a class="github-button" href="{{project.url}}" data-size="large" data-show-count="true" aria-label="">{{project.title}}</a>
-        </p>
+        <span class="icon-briefcase"></span>
     </div>
 </div>
 {% endfor %}
