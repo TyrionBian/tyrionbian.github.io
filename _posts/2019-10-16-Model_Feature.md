@@ -54,7 +54,7 @@ Provides little or no information. An example is a features where most examples 
 
 Feature selection can be performed manually by analyzing the data set before and after training, or by automatic statistical methods.
 
-### Correlation plot
+#### Correlation plot
 
 One manual technique for performing feature selection is to create visualizations that plot the relevant metrics for each feature in the dataset. [Seaborn](https://seaborn.pydata.org/) is a good python library. 
 The following code generates a correlation diagram of features in the breast cancer data set available from the scikit-learn API.
@@ -91,6 +91,11 @@ In the final visualization, we can identify some closely related features. There
 <figcaption>Correlation plot</figcaption>
 </figure>
 
-There are many tools and techniques that can be used to determine the importance of functionality. Some technologies are unique to specific algorithms, while others can be applied to various models and are called agnostic models.
+#### Feature importances
 
-To illustrate the functional importance, I will use the built-in functional importance method for the random forest classifier in scikit-learn. The following code fits the classifier and creates a graph showing the importance of the features.
+Once we have trained the model, we can perform further statistical analysis to understand the impact of features on the model output and determine the most useful features based on this.
+
+There are many tools and techniques that can be used to determine feature importance. Some technologies are unique to specific algorithms, while others can be applied to various models and are called agnostic models.
+
+To illustrate feature importance, I will use the built-in feature importance method for the random forest classifier in scikit-learn. The following code fits the classifier and creates a graph showing the importance of the features.
+
