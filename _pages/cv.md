@@ -74,6 +74,7 @@ excerpt:   This page contains the curriculum vitae (CV) of the author.
     </div>
     <div class="content">
         <h2>{{project.title}}</h2>
+        <div class="address">{{project.address}}</div>
         <ul>
             {% for responsibility in project.responsibilities %}
             <li>{{responsibility}}</li>
