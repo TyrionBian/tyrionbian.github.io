@@ -38,6 +38,7 @@ tianliang:
           team:             "Team of 2"
           title:            "Web Project"
           address:          "https://github.com/TyrionBian/chatbot-udc"
+          url:          "https://github.com/TyrionBian/chatbot-udc"
           technologies:     "C#, JavaScript, HTML5, CSS"
           responsibilities:
             - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet finibus libero sed ullamcorper. Donec."
