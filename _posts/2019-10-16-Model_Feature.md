@@ -86,7 +86,10 @@ sns.heatmap(corr, mask=mask, cmap=cmap,
 
 In the final visualization, we can identify some closely related features. Therefore, we may want to delete some of these features and some features with very low correlation with the target variable. We may also want to delete these features.
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+<figure>
+   <img src="{{ "/media/img/mountain2.jpg" | absolute_url }}" />
+   <figcaption>A nice mountain.</figcaption>
+</figure>
 
 There are many tools and techniques that can be used to determine the importance of functionality. Some technologies are unique to specific algorithms, while others can be applied to various models and are called agnostic models.
 
