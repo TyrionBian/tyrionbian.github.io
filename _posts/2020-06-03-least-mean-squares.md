@@ -11,7 +11,9 @@ author:            tianliang
 We use Linear Regression as basic background algorithm. We will also use $$X$$ denote the space of input values, and $$Y$$ the space of output values. In this example, $$X = Y = \mathbb{R}$$.
 As an initial choice, let's say we decide to approximate $$y$$ as a linear function of $$x$$:
 
-\$$ h_\theta(x) = \theta_0 + \theta_1x_1 + \theta_2x_2 $$
+$$ h_\theta(x) = \theta_0 + \theta_1x_1 + \theta_2x_2 $$
+
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
 Here, the $$\theta_i$$'s are the **parameters**(also called weights) parameterizing the space of linear functions mapping from $$X$$ to $$Y$$.When there is no risk of confusion, we will drop the $$\theta$$ subscript in $$h_\theta(x)$$, and write it more simply as $$h(x)$$. To simplify our notation, we also introduce the convention of letting $$x_\theta = 1$$ (this is the **intercept term**), so that
 
