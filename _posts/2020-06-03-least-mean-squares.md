@@ -5,6 +5,7 @@ date:              2020-06-03
 tag:               Machine Learning Basic
 category:          Machine Learning Basic
 author:            tianliang
+math:              true
 ---
 ## Least mean squares
 
