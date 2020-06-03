@@ -161,7 +161,7 @@ p\left( y^{(i)}|x^{(i)};\theta \right) =
 \frac{1}{\sqrt{2\pi} \sigma} exp \left( -\frac{(y^{(i)}-\theta^\mathrm{T}x^{(i)})^2}{2\sigma^2} \right).
 $$
 
-The notation "$$p(y^{(i)}|x^{(i)};\theta)$$" indicates that this is the distribution of $$y^{(i)}$$ given $$x^{(i)}$$ and parameterized by $$\theta$$. Note that we should not condition on $$\theta("p(y^{(i)}|x^{(i)};\theta)")$$, since $$\theta$$ is not a random variable. We can also write the distribution of $$y^{(i)}$$ as $$y^{(i)}|x^{(i)};\theta \sim \mathcal{N}(\theta^\mathrm{T}x^{(i)}, \sigma^2)$$.
+The notation indicates that this is the distribution of $$y^{(i)}$$ given $$x^{(i)}$$ and parameterized by $$\theta$$. Note that we should not condition on $$\theta("p(y^{(i)}|x^{(i)};\theta)")$$, since $$\theta$$ is not a random variable. We can also write the distribution of $$y^{(i)}$$ as $$y^{(i)}|x^{(i)};\theta \sim \mathcal{N}(\theta^\mathrm{T}x^{(i)}, \sigma^2)$$.
 
 Given $$X$$ (the design matrix, which contains all the $$x^{(i)}$$’s) and $$\theta$$, what is the distribution of the $$y^{(i)}$$’s?  The probability of the data is given by $$p(\vec{y}|X;\theta)$$. This quantity is typically viewed a function of $$\vec{y}$$ (and perhaps $$X$$), for a fixed value of $$\theta$$. When we wish to explicitly view this as a function of $$\theta$$, we will instead call it the **likelihood function**:
 \$$
