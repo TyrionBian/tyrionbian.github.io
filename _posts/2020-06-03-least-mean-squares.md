@@ -164,8 +164,7 @@ $$
 The notation "
 $$
 p(y^{(i)}|x^{(i)};\theta)
-$$
-" indicates that this is the distribution of $$y^{(i)}$$ given $$x^{(i)}$$ and parameterized by $$\theta$$.Note that we should not condition on "
+$$" indicates that this is the distribution of $$y^{(i)}$$ given $$x^{(i)}$$ and parameterized by $$\theta$$.Note that we should not condition on "
 $$
 \theta(p(y^{(i)}|x^{(i)};\theta))
 $$", since $$\theta$$ is not a random variable. We can also write the distribution of $$y^{(i)}$$ as 
