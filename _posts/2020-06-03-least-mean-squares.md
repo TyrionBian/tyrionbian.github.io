@@ -14,10 +14,7 @@ As an initial choice, let's say we decide to approximate $$y$$ as a linear funct
 
 $$ h_\theta(x) = \theta_0 + \theta_1x_1 + \theta_2x_2 $$
 
-$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
-
 Here, the $$\theta_i$$'s are the **parameters**(also called weights) parameterizing the space of linear functions mapping from $$X$$ to $$Y$$.When there is no risk of confusion, we will drop the $$\theta$$ subscript in $$h_\theta(x)$$, and write it more simply as $$h(x)$$. To simplify our notation, we also introduce the convention of letting $$x_\theta = 1$$ (this is the **intercept term**), so that
-
 \$$ 
 h(x) = \sum_{i=0}^n \theta_ix_i = \theta^\mathrm{T} x
 $$
@@ -35,7 +32,6 @@ If you’ve seen linear regression before, you may recognize this as the familia
 ### LMS algorithm
 
 We want to choose θ so as to minimize $$J(θ)$$. Let’s consider the gradient descent algorithm, which starts with some initial θ, and repeatedly performs the update:
-
 \$$
 \theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta)
 $$
