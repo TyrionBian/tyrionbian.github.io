@@ -61,14 +61,15 @@ $$
 The rule is called the **LMS** update rule (LMS stands for “least mean squares”),
 and is also known as the **Widrow-Hoff** learning rule.
 \$$
+\usepackage{amsmath}
 \begin{equation}
-\begin{aligned}
+\begin{split}
 \frac{\partial}{\partial \theta_j} J(\theta) &=
 \frac{\partial}{\partial \theta_j} \frac{1}{2}(h_\theta(x)-y)^2\\
 &=2*\frac{1}{2}(h_\theta(x)-y) \cdot \frac{\partial}{\partial \theta_j}(h_\theta(x)-y)\\
 &=(h_\theta(x)-y) \cdot \frac{\partial}{\partial \theta_j}\Bigl(\sum_{i=0}^n\theta_ix_i-y\Bigr)\\
 &=(h_\theta(x)-y)x_j
-\end{aligned}
+\end{split}
 \end{equation}
 $$
 
