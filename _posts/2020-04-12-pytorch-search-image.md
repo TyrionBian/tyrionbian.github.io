@@ -1,13 +1,13 @@
 ---
 layout:            post
-title:             "pytorch search image"
+title:             "Pytorch search image"
 date:              2020-04-12
-tag:               pytorch
-category:          pytorch
+tag:               Pytorch
+category:          Pytorch
 author:            tianliang
 math:              true
 ---
-## pytorch search image
+## Pytorch search image
 
 We use Linear Regression as basic background algorithm. We will also use $$\mathcal{X}$$ denote the space of input values, and $$\mathcal{Y}$$ the space of output values. In this example, $$\mathcal{X} = \mathcal{Y} = \mathbb{R}$$.
 As an initial choice, let's say we decide to approximate $$y$$ as a linear function of $$x$$:
