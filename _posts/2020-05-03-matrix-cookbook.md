@@ -16,4 +16,4 @@ math:              true
 I have more [^1] to say up here.
 
 ## Reference
-[^1]: MatrixCookBook.
+\[[^1]\]: MatrixCookBook.
