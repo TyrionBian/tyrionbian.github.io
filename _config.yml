@@ -22,6 +22,7 @@ disqus_shortname: "Tianliang Bian"
 sass:
     style: compressed
 markdown: kramdown
+toc_levels: 2..4
 kramdown:
   syntax_highlighter_opts:
     disable: true
