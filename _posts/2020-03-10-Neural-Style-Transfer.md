@@ -20,7 +20,7 @@ For example, let’s take an image of this turtle and Katsushika Hokusai's The G
 
 <div class="album">
    <figure>
-      <img src="{{ "/images/v.jpg" | absolute_url }}" />
+      <img src="{{ "/images/Green_Sea_Turtle_grazing_seagrass.jpg" | absolute_url }}" />
       <figcaption>Green Sea Turtle grazing seagrass</figcaption>
    </figure>   
    <figure>
