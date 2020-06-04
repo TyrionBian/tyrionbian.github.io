@@ -8,6 +8,11 @@ author:            tianliang
 math:              true
 ---
 ## Neural Style Transfer
+<table class="tfo-notebook-buttons" align="left">
+  <td>
+    <a target="_blank" href="https://github.com/tensorflow/models/blob/master/research/nst_blogpost/4_Neural_Style_Transfer_with_Eager_Execution.ipynb"><img src="https://www.tensorflow.org/images/GitHub-Mark-32px.png" />Code in this blog is quoted from this GitHub source</a>
+  </td>
+</table>
 ### Overview
 In this tutorial, we will learn how to use deep learning to compose images in the style of another image (ever wish you could paint like Picasso or Van Gogh?). This is known as neural style transfer! This is a technique outlined in [Leon A. Gatys' paper, A Neural Algorithm of Artistic Style](https://arxiv.org/abs/1508.06576), which is a great read, and you should definitely check it out.
 
