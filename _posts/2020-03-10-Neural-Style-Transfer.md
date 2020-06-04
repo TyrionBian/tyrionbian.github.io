@@ -21,11 +21,11 @@ For example, let’s take an image of this turtle and Katsushika Hokusai's The G
 <div class="album">
    <figure>
       <img src="{{ "/images/v.jpg" | absolute_url }}" />
-      <figcaption>Green_Sea_Turtle_grazing_seagrass</figcaption>
+      <figcaption>Green Sea Turtle grazing seagrass</figcaption>
    </figure>   
    <figure>
       <img src="{{ "/images/The_Great_Wave_off_Kanagawa.jpg" | absolute_url }}" />
-      <figcaption>The_Great_Wave_off_Kanagawa</figcaption>
+      <figcaption>The Great Wave off Kanagawa</figcaption>
    </figure>   
 </div>
 
@@ -33,8 +33,9 @@ Now how would it look like if Hokusai decided to paint the picture of this Turtl
 
 <figure>
 <img src="{{ "/images/wave_turtle.png" | absolute_url }}" />
-<figcaption>A nice mountain</figcaption>
+<figcaption>wave turtle</figcaption>
 </figure>
+
 
 
 
