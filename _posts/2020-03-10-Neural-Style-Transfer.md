@@ -9,6 +9,7 @@ math:              true
 ---
 ## Neural Style Transfer
 
+This is the explanation content and code about the model. Please [see here](https://github.com/TyrionBian/tyrionbian.github.io/blob/master/papers/Neural_Style_Transfer_with_Eager_Execution.html) for the running result of the program.
 ### Overview
 In this tutorial, we will learn how to use deep learning to compose images in the style of another image (ever wish you could paint like Picasso or Van Gogh?). This is known as neural style transfer! This is a technique outlined in [Leon A. Gatys' paper, A Neural Algorithm of Artistic Style](https://arxiv.org/abs/1508.06576), which is a great read, and you should definitely check it out.
 
@@ -571,3 +572,7 @@ Photo By: Andreas Praefcke [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY
 **[Image of Green Sea Turtle](https://commons.wikimedia.org/wiki/File:Green_Sea_Turtle_grazing_seagrass.jpg)**
 By P.Lindgren [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], from Wikimedia Commons
 
+
+
+## Referance
+Refer to the original document [here](https://github.com/tensorflow/models/blob/master/research/nst_blogpost/4_Neural_Style_Transfer_with_Eager_Execution.ipynb).
