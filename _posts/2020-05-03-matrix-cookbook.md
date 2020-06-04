@@ -9,9 +9,11 @@ math:              true
 ---
 ## matrix-cookbook
 
-<iframe src="https://docs.google.com/viewer?url=https://www.ics.uci.edu/~welling/teaching/KernelsICS273B/MatrixCookBook.pdf&embedded=true"></iframe>
-
-## two
-
 <iframe src="https://docs.google.com/viewerng/viewer?url=https://www.ics.uci.edu/~welling/teaching/KernelsICS273B/MatrixCookBook.pdf&embedded=true" frameborder="0" height="100%" width="100%">
 </iframe>
+
+	
+I have more [^1] to say up here.
+
+## Reference
+[^1]: MatrixCookBook.
