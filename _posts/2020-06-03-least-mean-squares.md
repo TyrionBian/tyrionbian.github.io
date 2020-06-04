@@ -7,7 +7,7 @@ category:          Machine Learning Basic
 author:            tianliang
 math:              true
 ---
-Contents:
+
 - TOC
 {:toc}
 
