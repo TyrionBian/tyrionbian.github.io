@@ -23,7 +23,7 @@ sass:
     style: compressed
 markdown: kramdown
 kramdown:
-  toc_levels: 2..4
+  toc_levels: "2,3"
   syntax_highlighter_opts:
     disable: true
 include: ['_pages']
