@@ -30,7 +30,7 @@ If you’ve seen linear regression before, you may recognize this as the familia
 
 ### 1. LMS algorithm
 
-We want to choose θ so as to minimize $$J(θ)$$. Let’s consider the gradient descent algorithm, which starts with some initial θ, and repeatedly performs the update:
+We want to choose θ so as to minimize $$J(θ)$$ [^1]. Let’s consider the gradient descent algorithm, which starts with some initial θ, and repeatedly performs the update:
 \$$
 \theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta)
 $$
@@ -121,7 +121,7 @@ Thus, using the fact that for a vector $$z$$, we have that $$z^\mathrm{T} z = \s
 \end{equation}
 $$
 
-Finally, to minimize $$J$$, let’s find its derivatives with respect to $$θ$$.We find that
+Finally, to minimize $$J$$, let’s find its derivatives with respect to $$θ$$.We find that [^2] [^3]
 \$$
 \begin{equation}
  \begin{aligned}
@@ -206,4 +206,12 @@ We know that, maximizing $$\ell(\theta)$$ gives the same result as minimizing
 \frac{1}{2}\sum_{i=1}^m (y^{(i)}-\theta^\mathrm{T}x^{(i)})^2,
 $$
 
+which we recognize to be $$J(\theta)$$, our original least-squares cost function.
+
+
+
+## Reference
+[^1]: [CS229: Machine Learning](http://cs229.stanford.edu/).
+[^2]: MatrixCookBook.
+[^3]: Bishop C M. Pattern recognition and machine learning[M]. springer, 2006.
 which we recognize to be $$J(\theta)$$, our original least-squares cost function.
