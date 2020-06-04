@@ -34,6 +34,15 @@ tianliang:
             - "Build credit risk model"
             - "Application of artificial intelligence algorithm"
     projects:
+        - time:             "27 Sep 2019"
+          title:            "Reverse image search"
+          url:              "https://github.com/TyrionBian/reverse-image-search"
+          describe:         "Reverse image search deep learning."
+          technologies:     "pytorch, keras, sklearn"
+          responsibilities:
+            - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet finibus libero sed ullamcorper. Donec."
+            - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed."
+            - "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sodales ligula sit amet nisl pellentesque, eu cursus neque."
         - time:             "15 Jun 2018"
           title:            "tfidf_xgb"
           url:              "https://github.com/TyrionBian/tfidf_xgb"
