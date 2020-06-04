@@ -8,5 +8,12 @@ author:            tianliang
 math:              true
 ---
 # Data Structures and Algorithms Series
-
+-------------------------------------------
 ## PART: Searching Algorithms
+-------------------------------------------
+
+
+
+
+
+
