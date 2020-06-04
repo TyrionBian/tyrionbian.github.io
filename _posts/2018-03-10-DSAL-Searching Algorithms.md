@@ -7,12 +7,11 @@ category:          Data Structures and Algorithms
 author:            tianliang
 math:              true
 ---
-
+# Data Structures and Algorithms Series
+-------------------------------------------
 - TOC
 {:toc}
 
-# Data Structures and Algorithms Series
--------------------------------------------
 ## PART: Searching Algorithms
 ### 1.Linear search
 
