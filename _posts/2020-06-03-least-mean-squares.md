@@ -121,7 +121,7 @@ Thus, using the fact that for a vector $$z$$, we have that $$z^\mathrm{T} z = \s
 \end{equation}
 $$
 
-Finally, to minimize $$J$$, let’s find its derivatives with respect to $$θ$$.We find that [^2] [^3]
+Finally, to minimize $$J$$, let’s find its derivatives with respect to $$θ$$.We find that [^2]
 \$$
 \begin{equation}
  \begin{aligned}
@@ -142,7 +142,7 @@ $$
 
 ### 3. Probabilistic interpretation
 
-Let us assume that the target variables and the inputs are related via the equation
+Let us assume that the target variables and the inputs are related via the equation [^3]
 \$$
 y^{(i)}=\theta^{\mathrm{T}}x^{(i)}+\epsilon^{(i)},
 $$
@@ -214,4 +214,3 @@ which we recognize to be $$J(\theta)$$, our original least-squares cost function
 [^1]: [CS229: Machine Learning](http://cs229.stanford.edu/).
 [^2]: MatrixCookBook.
 [^3]: Bishop C M. Pattern recognition and machine learning[M]. springer, 2006.
-which we recognize to be $$J(\theta)$$, our original least-squares cost function.
