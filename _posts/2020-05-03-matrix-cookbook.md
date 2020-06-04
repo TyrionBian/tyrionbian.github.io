@@ -9,11 +9,9 @@ math:              true
 ---
 ## matrix-cookbook
 
-<object data="https://www.ics.uci.edu/~welling/teaching/KernelsICS273B/MatrixCookBook.pdf" type="application/pdf">
-    <iframe src="https://docs.google.com/viewer?url=https://www.ics.uci.edu/~welling/teaching/KernelsICS273B/MatrixCookBook.pdf&embedded=true"></iframe>
-</object>
+<iframe src="https://docs.google.com/viewer?url=https://www.ics.uci.edu/~welling/teaching/KernelsICS273B/MatrixCookBook.pdf&embedded=true"></iframe>
 
 ## two
 
-<iframe src="https://docs.google.com/viewerng/viewer?url=http://infolab.stanford.edu/pub/papers/google.pdf&embedded=true" frameborder="0" height="100%" width="100%">
+<iframe src="https://docs.google.com/viewerng/viewer?url=https://www.ics.uci.edu/~welling/teaching/KernelsICS273B/MatrixCookBook.pdf&embedded=true" frameborder="0" height="100%" width="100%">
 </iframe>
