@@ -9,7 +9,7 @@ math:              true
 ---
 ## Neural Style Transfer
 
-<table class="tfo-notebook-buttons" align="left">
+<table class="tfo-notebook-buttons" align="left" border=1 width=50%>
   <td>
     <a target="_blank" href="https://github.com/tensorflow/models/blob/master/research/nst_blogpost/4_Neural_Style_Transfer_with_Eager_Execution.ipynb"><img src="https://www.tensorflow.org/images/GitHub-Mark-32px.png" />Code in this blog is quoted from this GitHub source</a>
   </td>
