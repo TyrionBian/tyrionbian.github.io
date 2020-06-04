@@ -8,14 +8,14 @@ author:            tianliang
 math:              true
 ---
 
-any list
+- TOC
+{:toc}
 
 # Data Structures and Algorithms Series
 -------------------------------------------
 ## PART: Searching Algorithms
 ### 1.Linear search
 
-[Toc]
 
 
 
