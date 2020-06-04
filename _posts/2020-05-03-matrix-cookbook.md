@@ -9,5 +9,5 @@ math:              true
 ---
 ## matrix-cookbook
 
-<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=http://img.labnol.org/di/PowerPoint.ppt' frameborder='0'></iframe>
+<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://www.ics.uci.edu/~welling/teaching/KernelsICS273B/MatrixCookBook.pdf' frameborder='0'></iframe>
 
