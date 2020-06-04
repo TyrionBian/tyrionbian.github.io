@@ -9,5 +9,6 @@ math:              true
 ---
 ## matrix-cookbook
 
-<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://www.ics.uci.edu/~welling/teaching/KernelsICS273B/MatrixCookBook.pdf' frameborder='0'></iframe>
-
+<object data="https://www.ics.uci.edu/~welling/teaching/KernelsICS273B/MatrixCookBook.pdf" type="application/pdf">
+    <iframe src="https://docs.google.com/viewer?url=https://www.ics.uci.edu/~welling/teaching/KernelsICS273B/MatrixCookBook.pdf&embedded=true"></iframe>
+</object>
