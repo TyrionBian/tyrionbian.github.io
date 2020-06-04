@@ -8,8 +8,8 @@ author:            tianliang
 math:              true
 ---
 ## Neural Style Transfer
-### Overview
 
+### Overview
 In this tutorial, we will learn how to use deep learning to compose images in the style of another image (ever wish you could paint like Picasso or Van Gogh?). This is known as neural style transfer! This is a technique outlined in [Leon A. Gatys' paper, A Neural Algorithm of Artistic Style](https://arxiv.org/abs/1508.06576), which is a great read, and you should definitely check it out.
 
 But, what is neural style transfer?
@@ -275,4 +275,299 @@ $$L_{style}(a, x) = \sum_{l \in L} w_l E_l$$
 where we weight the contribution of each layer's loss by some factor $$w_l$$. In our case, we weight each layer equally ($$w_l =\frac{1}{|L|}$$)
 
 ### Apply style transfer to our images
+#### Run Gradient Descent 
+If you aren't familiar with gradient descent/backpropagation or need a refresher, you should definitely check out this [awesome resource](https://developers.google.com/machine-learning/crash-course/reducing-loss/gradient-descent).
+
+In this case, we use the [Adam](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/Adam)* optimizer in order to minimize our loss. We iteratively update our output image such that it minimizes our loss: we don't update the weights associated with our network, but instead we train our input image to minimize loss. In order to do this, we must know how we calculate our loss and gradients. 
+
+\* Note that L-BFGS, which if you are familiar with this algorithm is recommended, isn’t used in this tutorial because a primary motivation behind this tutorial was to illustrate best practices with eager execution, and, by using Adam, we can demonstrate the autograd/gradient tape functionality with custom training loops.
+
+We’ll define a little helper function that will load our content and style image, feed them forward through our network, which will then output the content and style feature representations from our model. 
+
+```python
+def get_feature_representations(model, content_path, style_path):
+  """Helper function to compute our content and style feature representations.
+
+  This function will simply load and preprocess both the content and style 
+  images from their path. Then it will feed them through the network to obtain
+  the outputs of the intermediate layers. 
+  
+  Arguments:
+    model: The model that we are using.
+    content_path: The path to the content image.
+    style_path: The path to the style image
+    
+  Returns:
+    returns the style features and the content features. 
+  """
+  # Load our images in 
+  content_image = load_and_process_img(content_path)
+  style_image = load_and_process_img(style_path)
+  
+  # batch compute content and style features
+  style_outputs = model(style_image)
+  content_outputs = model(content_image)
+  
+  
+  # Get the style and content feature representations from our model  
+  style_features = [style_layer[0] for style_layer in style_outputs[:num_style_layers]]
+  content_features = [content_layer[0] for content_layer in content_outputs[num_style_layers:]]
+  return style_features, content_features
+```
+#### Computing the loss and gradients
+Here we use [**tf.GradientTape**](https://www.tensorflow.org/programmers_guide/eager#computing_gradients) to compute the gradient. It allows us to take advantage of the automatic differentiation available by tracing operations for computing the gradient later. It records the operations during the forward pass and then is able to compute the gradient of our loss function with respect to our input image for the backwards pass.
+
+```python
+def compute_loss(model, loss_weights, init_image, gram_style_features, content_features):
+  """This function will compute the loss total loss.
+  
+  Arguments:
+    model: The model that will give us access to the intermediate layers
+    loss_weights: The weights of each contribution of each loss function. 
+      (style weight, content weight, and total variation weight)
+    init_image: Our initial base image. This image is what we are updating with 
+      our optimization process. We apply the gradients wrt the loss we are 
+      calculating to this image.
+    gram_style_features: Precomputed gram matrices corresponding to the 
+      defined style layers of interest.
+    content_features: Precomputed outputs from defined content layers of 
+      interest.
+      
+  Returns:
+    returns the total loss, style loss, content loss, and total variational loss
+  """
+  style_weight, content_weight = loss_weights
+  
+  # Feed our init image through our model. This will give us the content and 
+  # style representations at our desired layers. Since we're using eager
+  # our model is callable just like any other function!
+  model_outputs = model(init_image)
+  
+  style_output_features = model_outputs[:num_style_layers]
+  content_output_features = model_outputs[num_style_layers:]
+  
+  style_score = 0
+  content_score = 0
+
+  # Accumulate style losses from all layers
+  # Here, we equally weight each contribution of each loss layer
+  weight_per_style_layer = 1.0 / float(num_style_layers)
+  for target_style, comb_style in zip(gram_style_features, style_output_features):
+    style_score += weight_per_style_layer * get_style_loss(comb_style[0], target_style)
+    
+  # Accumulate content losses from all layers 
+  weight_per_content_layer = 1.0 / float(num_content_layers)
+  for target_content, comb_content in zip(content_features, content_output_features):
+    content_score += weight_per_content_layer* get_content_loss(comb_content[0], target_content)
+  
+  style_score *= style_weight
+  content_score *= content_weight
+
+  # Get total loss
+  loss = style_score + content_score 
+  return loss, style_score, content_score
+```
+
+Then computing the gradients is easy:
+
+```python
+def compute_grads(cfg):
+  with tf.GradientTape() as tape: 
+    all_loss = compute_loss(**cfg)
+  # Compute gradients wrt input image
+  total_loss = all_loss[0]
+  return tape.gradient(total_loss, cfg['init_image']), all_loss
+```
+#### Optimization loop
+```python
+import IPython.display
+
+def run_style_transfer(content_path, 
+                       style_path,
+                       num_iterations=1000,
+                       content_weight=1e3, 
+                       style_weight=1e-2): 
+  # We don't need to (or want to) train any layers of our model, so we set their
+  # trainable to false. 
+  model = get_model() 
+  for layer in model.layers:
+    layer.trainable = False
+  
+  # Get the style and content feature representations (from our specified intermediate layers) 
+  style_features, content_features = get_feature_representations(model, content_path, style_path)
+  gram_style_features = [gram_matrix(style_feature) for style_feature in style_features]
+  
+  # Set initial image
+  init_image = load_and_process_img(content_path)
+  init_image = tf.Variable(init_image, dtype=tf.float32)
+  # Create our optimizer
+  opt = tf.train.AdamOptimizer(learning_rate=5, beta1=0.99, epsilon=1e-1)
+
+  # For displaying intermediate images 
+  iter_count = 1
+  
+  # Store our best result
+  best_loss, best_img = float('inf'), None
+  
+  # Create a nice config 
+  loss_weights = (style_weight, content_weight)
+  cfg = {
+      'model': model,
+      'loss_weights': loss_weights,
+      'init_image': init_image,
+      'gram_style_features': gram_style_features,
+      'content_features': content_features
+  }
+    
+  # For displaying
+  num_rows = 2
+  num_cols = 5
+  display_interval = num_iterations/(num_rows*num_cols)
+  start_time = time.time()
+  global_start = time.time()
+  
+  norm_means = np.array([103.939, 116.779, 123.68])
+  min_vals = -norm_means
+  max_vals = 255 - norm_means   
+  
+  imgs = []
+  for i in range(num_iterations):
+    grads, all_loss = compute_grads(cfg)
+    loss, style_score, content_score = all_loss
+    opt.apply_gradients([(grads, init_image)])
+    clipped = tf.clip_by_value(init_image, min_vals, max_vals)
+    init_image.assign(clipped)
+    end_time = time.time() 
+    
+    if loss < best_loss:
+      # Update best loss and best image from total loss. 
+      best_loss = loss
+      best_img = deprocess_img(init_image.numpy())
+
+    if i % display_interval== 0:
+      start_time = time.time()
+      
+      # Use the .numpy() method to get the concrete numpy array
+      plot_img = init_image.numpy()
+      plot_img = deprocess_img(plot_img)
+      imgs.append(plot_img)
+      IPython.display.clear_output(wait=True)
+      IPython.display.display_png(Image.fromarray(plot_img))
+      print('Iteration: {}'.format(i))        
+      print('Total loss: {:.4e}, ' 
+            'style loss: {:.4e}, '
+            'content loss: {:.4e}, '
+            'time: {:.4f}s'.format(loss, style_score, content_score, time.time() - start_time))
+  print('Total time: {:.4f}s'.format(time.time() - global_start))
+  IPython.display.clear_output(wait=True)
+  plt.figure(figsize=(14,4))
+  for i,img in enumerate(imgs):
+      plt.subplot(num_rows,num_cols,i+1)
+      plt.imshow(img)
+      plt.xticks([])
+      plt.yticks([])
+      
+  return best_img, best_loss 
+```
+
+```python
+best, best_loss = run_style_transfer(content_path, 
+                                     style_path, num_iterations=1000)
+
+Image.fromarray(best)
+```
+
+### Visualize outputs
+We "deprocess" the output image in order to remove the processing that was applied to it. 
+
+```python
+def show_results(best_img, content_path, style_path, show_large_final=True):
+  plt.figure(figsize=(10, 5))
+  content = load_img(content_path) 
+  style = load_img(style_path)
+
+  plt.subplot(1, 2, 1)
+  imshow(content, 'Content Image')
+
+  plt.subplot(1, 2, 2)
+  imshow(style, 'Style Image')
+
+  if show_large_final: 
+    plt.figure(figsize=(10, 10))
+
+    plt.imshow(best_img)
+    plt.title('Output Image')
+    plt.show()
+```
+
+```python
+show_results(best, content_path, style_path)
+```
+
+### Try it on other images
+Image of Tuebingen 
+
+Photo By: Andreas Praefcke [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY 3.0  (https://creativecommons.org/licenses/by/3.0)], from Wikimedia Commons
+
+#### Starry night + Tuebingen
+```python
+best_starry_night, best_loss = run_style_transfer('/tmp/nst/Tuebingen_Neckarfront.jpg',
+                                                  '/tmp/nst/1024px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg')
+```
+```python
+show_results(best_starry_night, '/tmp/nst/Tuebingen_Neckarfront.jpg',
+             '/tmp/nst/1024px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg')
+```
+
+#### Pillars of Creation + Tuebingen
+```python
+best_poc_tubingen, best_loss = run_style_transfer('/tmp/nst/Tuebingen_Neckarfront.jpg', 
+                                                  '/tmp/nst/Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg')
+```
+```python
+show_results(best_poc_tubingen, 
+             '/tmp/nst/Tuebingen_Neckarfront.jpg',
+             '/tmp/nst/Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg')
+```
+
+#### Kandinsky Composition 7 + Tuebingen
+```python
+best_kandinsky_tubingen, best_loss = run_style_transfer('/tmp/nst/Tuebingen_Neckarfront.jpg', 
+                                                  '/tmp/nst/Vassily_Kandinsky,_1913_-_Composition_7.jpg')
+```
+```python
+show_results(best_kandinsky_tubingen, 
+             '/tmp/nst/Tuebingen_Neckarfront.jpg',
+             '/tmp/nst/Vassily_Kandinsky,_1913_-_Composition_7.jpg')
+```
+
+#### Pillars of Creation + Sea Turtle
+```python
+best_poc_turtle, best_loss = run_style_transfer('/tmp/nst/Green_Sea_Turtle_grazing_seagrass.jpg', 
+                                                  '/tmp/nst/Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg')
+```
+```python
+show_results(best_poc_turtle, 
+             '/tmp/nst/Green_Sea_Turtle_grazing_seagrass.jpg',
+             '/tmp/nst/Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg')
+```
+
+### Key Takeaways
+
+#### What we covered:
+
+* We built several different loss functions and used backpropagation to transform our input image in order to minimize these losses
+  * In order to do this we had to load in a **pretrained model** and use its learned feature maps to describe the content and style representation of our images.
+    * Our main loss functions were primarily computing the distance in terms of these different representations
+* We implemented this with a custom model and **eager execution**
+  * We built our custom model with the Functional API 
+  * Eager execution allows us to dynamically work with tensors, using a natural python control flow
+  * We manipulated tensors directly, which makes debugging and working with tensors easier. 
+* We iteratively updated our image by applying our optimizers update rules using **tf.gradient**. The optimizer minimized a given loss with respect to our input image. 
+
+**[Image of Tuebingen](https://commons.wikimedia.org/wiki/File:Tuebingen_Neckarfront.jpg)** 
+Photo By: Andreas Praefcke [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY 3.0  (https://creativecommons.org/licenses/by/3.0)], from Wikimedia Commons
+
+**[Image of Green Sea Turtle](https://commons.wikimedia.org/wiki/File:Green_Sea_Turtle_grazing_seagrass.jpg)**
+By P.Lindgren [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], from Wikimedia Commons
 
