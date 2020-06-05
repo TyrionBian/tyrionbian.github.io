@@ -14,12 +14,14 @@ We can try to use linear regression algorithm to predict $$y$$ given $$x$$. But 
 
 To fix this problem, we change our hypotheses $$h_\theta(x)$$.
 \$$
-h_\theta(x) = g(\theta^{\mathrm{T}}x) = \frac{1}{1+\mathrm{e}^{-\theta^{\mathrm{T}}x}}
+h_\theta(x) = g(\theta^{\mathrm{T}}x) = \frac{1}{1+e^{-\theta^{\mathrm{T}}x}}
 $$
+
 where
 \$$
-g(z)=\frac{1}{1+\mathrm{e}^{-z}}
+g(z)=\frac{1}{1+e^{-z}}
 $$
+
 is called the **logistic function** or the **sigmod function**. Here is a plot showing $$g(z)$$:
 
 <figure>
