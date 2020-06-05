@@ -73,4 +73,9 @@ To maximize the likelihood, we can use gradient ascent.Firstly, let's start by w
 &= (y-h_\theta(x))x_j
 $$
 
+Written in vectorial notation, our updates will therefore be given by $$\theta := \theta + \alpha \nabla_\theta \ell(\theta) $$. Therefore gives us the stochastic gradient ascent rule
+\$$
+\theta_j := \theta_j + \alpha (y^{(i)}-h_\theta(x^{(i)}))x_j ^{(i)}
+$$
 
+If we compare this to the LMS update rule, we see that it looks identical; but this is not the same algorithm, because $$h_\theta(x^{(i)})$$ is now defined as a non-linear function of $$\theta^{\mathrm{T}}x$$. 
