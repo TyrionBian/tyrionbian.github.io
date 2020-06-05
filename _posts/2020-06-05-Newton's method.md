@@ -13,7 +13,7 @@ To get us started, let's consider Newton's method for finding a zero of a functi
 
 <figure>
    <img src="{{ "/images/NewtonIteration_Ani.gif" | absolute_url }}" />
-   <figcaption>Newton's method</figcaption>
+   <figcaption>Newton's method(from wikipedia)</figcaption>
 </figure>
 
 
