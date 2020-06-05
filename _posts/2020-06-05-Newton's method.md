@@ -13,3 +13,11 @@ To get us started, let's consider Newton's method for finding a zero of a functi
 
 
 ![Newton's method]({{ "/images/NewtonIteration_Ani.gif" | absolute_url }})
+
+
+<figure>
+   <img src="{{ "/images/NewtonIteration_Ani.gif" | absolute_url }}" />
+   <figcaption>Newton's method</figcaption>
+</figure>
+
+
