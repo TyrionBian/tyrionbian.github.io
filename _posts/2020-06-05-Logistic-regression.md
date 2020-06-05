@@ -12,7 +12,7 @@ We will focus on binary classification problem for Logistic regression in which 
 
 We can try to use linear regression algorithm to predict $$y$$ given $$x$$. But it always performs very poorly, and also doesnot make sense for $$h_\theta(x)$$ to take values larger than 1 or smaller than 0 when we know that $$y\in\{0,1\}$$.
 
-To fix this problem, we change our hypotheses $$h_\theta(x).
+To fix this problem, we change our hypotheses $$h_\theta(x)$$.
 \$$
 h_\theta(x) = g(\theta^{\mathrm{T}}x) = \frac{1}{1+\mathrm{e}^{-\theta^{\mathrm{T}}x}}
 $$
@@ -30,21 +30,27 @@ is called the **logistic function** or the **sigmod function**. Here is a plot s
 $$g(z)$$, and hence also h(x), is always bounded between 0 and 1. And we are keeping the convention of letting $$x_0=1$$, so that $$\theta^{\rm{T}}x=\theta_0+\sum_{j=1}^n\theta_j x_j$$.
 
 Before we moving on, here is a useful property of the derivative of the sigmoid function, which we write as $$g'$$:
-
 \$$
+\begin{equation}
+ \begin{aligned}
 g'(z) &= \frac{d}{dz} \frac{1}{1+e^{-z}} \newline
 &= -\frac{1}{(1+e^{-z})^2} (-e^{-z}) \newline
 &=\frac{e^{-z}}{(1+e^{-z})^2} \newline
 &=\frac{1+e^{-z}-1}{(1+e^{-z})^2} \newline
 &=\frac{1}{1+e^{-z}}(1-\frac{1}{1+e^{-z}}) \newline
 &=g(z)(1-g(z))
+ \end{aligned}
+\end{equation}
 $$
 
 Logistic regression can be derived as the maximum likelihood estimator under a set of assumptions.Let us assume that:
-
 \$$
-P(y=1 | x;\theta) &= h_\theta(x) \newline
-P(y=0 | x:\theta) &= 1 - h_\theta(x).
+\begin{equation}
+ \begin{aligned}
+&P(y=1 | x;\theta) = h_\theta(x) \newline
+&P(y=0 | x;\theta) = 1 - h_\theta(x).
+ \end{aligned}
+\end{equation}
 $$
 
 We also can written like this:
@@ -54,9 +60,13 @@ $$
 
 Assuming that the $$m$$ training examples where generated independently, we can write the likelihood of the parameters like this:
 \$$
+\begin{equation}
+ \begin{aligned}
 L(\theta) &= p(\vec{y} | X;\theta) \newline
 &=\prod_{i=1}^m p(y^{(i)} | x^{(i)};\theta) \newline
 &=\prod_{i=1}^m(h_\theta(x^{(i)}))^{y^{(i)}}(1-h_\theta(x^{(i)}))^{1-y^{(i)}}
+ \end{aligned}
+\end{equation}
 $$
 
 We can maximize the log likelihood:
@@ -66,11 +76,15 @@ $$
 
 To maximize the likelihood, we can use gradient ascent.Firstly, let's start by working with just one training example $$(x,y)$$, and take derivatives to derive the stochastic gradient ascent rule:
 \$$
+\begin{equation}
+ \begin{aligned}
 \nabla \ell(\theta) &= \frac{\partial}{\partial \theta_j} \ell(\theta) \newline
 &= \frac{\partial \ell(\theta)}{\partial g(\theta^{\mathrm{T}}x)} \cdot \frac{\partial g(\theta^{\mathrm{T}}x)}{\partial \theta^{\mathrm{T}}x} \cdot \frac{\partial \theta^{\mathrm{T}}x}{\partial \theta_j} \newline
 &= \left( y \frac{1}{g(\theta^{\mathrm{T}}x)} - (1-y) \frac{1}{1-g(\theta^{\mathrm{T}}x)} \right) \cdot g(\theta^{\mathrm{T}}x)(1-g(\theta^{\mathrm{T}}x)) \cdot \frac{\partial}{\partial \theta_j}\theta^{\mathrm{T}}x \newline 
 &= (y(1-g(\theta^{\mathrm{T}}x)) - (1-y)g(\theta^{\mathrm{T}}x))x_j \newline 
 &= (y-h_\theta(x))x_j
+ \end{aligned}
+\end{equation}
 $$
 
 Written in vectorial notation, our updates will therefore be given by $$\theta := \theta + \alpha \nabla_\theta \ell(\theta) $$. Therefore gives us the stochastic gradient ascent rule
