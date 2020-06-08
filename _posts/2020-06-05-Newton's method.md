@@ -42,3 +42,7 @@ Newton’s method typically enjoys faster convergence than (batch) gradient desc
 Since Newton's method needs to find and invert an $n-by-n$ Hessian, so one iteration of Newton's can be more expensive than on iteration of gradient descent. But in practical applications, it is usually much faster overall,, because $n$ is too large.
 
 When Newton’s method is applied to maximize the logistic regression log likelihood function $\ell(θ)$, the resulting method is also called **Fisher scoring**.
+
+## Reference
+[CS229: Machine Learning](http://cs229.stanford.edu/).
+
