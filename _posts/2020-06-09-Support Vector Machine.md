@@ -56,7 +56,7 @@ ${\bf w}^{\rm{T}}\phi({\bf x}) + b = -1$ (anything on or below this boundary is 
 
 Geometrically, the distance between these two hyperplanes is computed using the distance from a point to a plane equation. It's $\frac {2}{\Vert{\vec {w}}\Vert}$, so to maximize the distance between the planes we want to minimize $\Vert \vec{w} \Vert$. The distance is computed using the distance from a point to a plane equation.
 
-#### 2. Why is the SVM margin equal to ?
+#### 2. Why is the SVM margin equal to $\frac {2}{\Vert \vec{w} \Vert}$?
 
 ###### method1:
 
