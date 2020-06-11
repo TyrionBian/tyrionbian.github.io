@@ -59,16 +59,7 @@ Geometrically, the distance between these two hyperplanes is computed using the 
 #### 2. Why is the SVM margin equal to $\frac {2}{\Vert {\bf w} \Vert}$?
 
 ###### method1:
-Let ${\bf x}_0$ be a point in the hyperplane ${\bf w}{\bf x} - b = -1$. So we get ${\bf w}{\bf x}_0 - b = -1$. The distance from ${\bf x}_0$ to hyperplanes ${\bf w}{\bf x} - b = 1$:
-\$$
-\begin{equation}
- \begin{aligned}
-& \gamma = \frac{\Vert {\bf w}{\bf x}_0 - b - 1 \Vert}{\sqrt{\Vert w\Vert^2}} \newline
-\Longrightarrow &\gamma = \frac{\Vert -1 - 1 \Vert}{\Vert w\Vert} \newline
-\Longrightarrow &\gamma = \frac{2}{\Vert w\Vert} \newline
- \end{aligned}
-\end{equation}
-$$
+
 
 ###### method2:
 
