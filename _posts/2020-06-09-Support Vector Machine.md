@@ -71,10 +71,6 @@ Let ${\bf x}_0$ be a point in the hyperplane ${\bf w}{\bf x} - b = -1$. So we ge
 $$
 
 ###### method2:
-\$$
-{\bf w}({\bf x}_0 + \gamma \frac{{\bf w}}{\Vert {\bf w} \Vert}) - b = 1
-$$
-
 Expanding this equation, we have
 \$$
 \begin{equation}
