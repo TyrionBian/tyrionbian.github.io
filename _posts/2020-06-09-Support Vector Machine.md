@@ -74,6 +74,9 @@ $$
 To measure the distance between hyperplanes ${\bf w}{\bf x} - b = -1$ and ${\bf w}{\bf x} - b = 1$, we only need to compute the perpendicular distance from ${\bf x}_0$ to plane ${\bf w}{\bf x} - b = 1$, denoted as $\gamma$.
 
 Note that $\frac{w}{\Vert w \Vert}$ is a unit normal vector of the hyperplane ${\bf w}{\bf x} - b = 1$. So ${\bf x}_0 + \gamma \frac{w}{\Vert w \Vert}$ should be a point in hyperplane ${\bf w}{\bf x} - b = 1$.
+\$$
+{\bf w}({\bf x}_0 + \gamma \frac{{\bf w}}{\Vert {\bf w} \Vert}) - b = 1
+$$
 
 #### 3. Lagrange multipliers
 We consider an optimization problem in the standard form:
