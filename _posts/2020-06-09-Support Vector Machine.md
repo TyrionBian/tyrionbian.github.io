@@ -96,11 +96,11 @@ Expanding this equation, we have
 \end{equation}
 $$
 
-The optimization problem then simply requires that we maximize ${\bf w}^{-1}$, which is equivalent to minimizing ${\bf w}^{2}$, and so we have to solve the optimization problem:
+The optimization problem then simply requires that we maximize ${\bf w}^{-1}$, which is equivalent to minimizing ${\Vert {\bf w} \Vert}^{2}$, and so we have to solve the optimization problem:
 \$$
 \begin{equation}
  \begin{aligned}
-\underset{\bf w,b}{\arg\min} &\quad \frac{1}{2}{\Vert {\bf w} \Vert}^2 \newline
+\underset{w,b}{\arg\min} &\quad \frac{1}{2}{\Vert {\bf w} \Vert}^2 \newline
 \text{s.t.}  &\quad t_i ({\bf w}^{\rm{T}}\phi({\bf x}^{(i)}) + b) \geqslant 1, \quad i = 1, ..., m
  \end{aligned}
 \end{equation}
@@ -134,11 +134,15 @@ $$
 
 Here, the “$\mathcal P$” subscript stands for “primal”. We can write like this:
 \$$
+\begin{equation}
+ \begin{aligned}
 θ_{\mathcal P}(w) = \left\{
 \begin{array}{lr}
 f(w) & \text{if $w$ satisfies primal constraints} \newline
 \infty & \text{otherwise}
 \end{array} \right.
+ \end{aligned}
+\end{equation}
 $$
 
 $θ_{\mathcal P}$ takes the same value as the objective in our problem for all values of w that satisfies the primal constraints, and is positive infinity if the constraints are violated. Hence, if we consider the minimization problem
