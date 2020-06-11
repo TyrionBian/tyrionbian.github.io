@@ -97,6 +97,14 @@ Expanding this equation, we have
 $$
 
 The optimization problem then simply requires that we maximize ${\bf w}^{-1}$, which is equivalent to minimizing ${\bf w}^{2}$, and so we have to solve the optimization problem:
+\$$
+\begin{equation}
+ \begin{aligned}
+\underset{{\bf w},b}{\arg\min} &\quad \frac{1}{2}\Vert {\bf w} \Vert ^2 \newline
+\text{s.t.}  &\quad t_i ({\bf w}^{\rm{T}}\phi({\bf x}^{(i)}) + b) \geqslant 1, \quad i = 1, ..., m
+ \end{aligned}
+\end{equation}
+$$
 
 The factor of $1/2$ is included for later convenience. This is an example of a **quadratic programming** problem in which we are tring to minimize a quadratic function subject to a set of linear inequality constraints. 
 
