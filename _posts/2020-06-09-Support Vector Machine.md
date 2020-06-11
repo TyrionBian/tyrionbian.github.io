@@ -56,24 +56,6 @@ ${\bf w}^{\rm{T}}\phi({\bf x}) + b = -1$ (anything on or below this boundary is 
 
 Geometrically, the distance between these two hyperplanes is computed using the distance from a point to a plane equation. It's $\frac {2}{\Vert{\vec {w}}\Vert}$, so to maximize the distance between the planes we want to minimize $\Vert \vec{w} \Vert$. The distance is computed using the distance from a point to a plane equation.
 
-#### 2. Why is the SVM margin equal to $\frac {2}{\Vert {\bf w} \Vert}$?
-
-###### method1:
-
-
-###### method2:
-
-The optimization problem then simply requires that we maximize ${\bf w}^{-1}$, which is equivalent to minimizing ${\bf w}^{2}$, and so we have to solve the optimization problem:
-\$$
-\begin{equation}
- \begin{aligned}
-\underset{{\bf w},b}{\arg\min} &\quad \frac{1}{2}\Vert {\bf w}\Vert ^{2} \newline
-\text{s.t.}  &\quad t_i ({\bf w}^{\rm{T}}\phi({\bf x}^{(i)}) + b) \geqslant 1, \quad i = 1, ..., m
- \end{aligned}
-\end{equation}
-$$
-
-The factor of $1/2$ is included for later convenience. This is an example of a **quadratic programming** problem in which we are tring to minimize a quadratic function subject to a set of linear inequality constraints. 
 
 #### 3. Lagrange multipliers
 We consider an optimization problem in the standard form:
