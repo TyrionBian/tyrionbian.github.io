@@ -134,15 +134,13 @@ $$
 
 Here, the “$\mathcal P$” subscript stands for “primal”. We can write like this:
 \$$
-\begin{equation}
- \begin{aligned}
+\begin{align*}
 θ_{\mathcal P}(w) = \left\{
 \begin{array}{lr}
 f(w) & \text{if w satisfies primal constraints} \newline
 \infty & \text{otherwise}
 \end{array} \right.
- \end{aligned}
-\end{equation}
+\end{align*}
 $$
 
 $θ_{\mathcal P}$ takes the same value as the objective in our problem for all values of w that satisfies the primal constraints, and is positive infinity if the constraints are violated. Hence, if we consider the minimization problem
