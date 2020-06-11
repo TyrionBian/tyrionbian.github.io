@@ -96,6 +96,10 @@ Expanding this equation, we have
 \end{equation}
 $$
 
+The optimization problem then simply requires that we maximize ${\bf w}^{-1}$, which is equivalent to minimizing ${\bf w}^{2}$, and so we have to solve the optimization problem:
+
+The factor of $1/2$ is included for later convenience. This is an example of a **quadratic programming** problem in which we are tring to minimize a quadratic function subject to a set of linear inequality constraints. 
+
 #### 3. Lagrange multipliers
 We consider an optimization problem in the standard form:
 \$$
