@@ -133,6 +133,7 @@ Now we consider the quantity
 $$
 
 Here, the “$\mathcal P$” subscript stands for “primal”. We can write like this
+
 \$$
 \begin{equation}
  \begin{aligned}
@@ -172,6 +173,7 @@ d^* = \underset{α,β : α_i≥0}{\max} \underset{w}{\min}L(w, α, β) = \unders
 $$
 
 There must exist $w^∗, α^∗, β^∗$ so that $w^∗$ is the solution to the primal problem, $α^∗, β^∗$ are the solution to the dual problem, and moreover $p^∗ = d^∗ = L(w^∗, α^∗, β^∗)$. Moreover, $w^∗, α^∗$ and $β^∗$ satisfy the Karush-Kuhn-Tucker (KKT) conditions, which are as follows
+
 \$$
 \begin{equation}
  \begin{aligned}
