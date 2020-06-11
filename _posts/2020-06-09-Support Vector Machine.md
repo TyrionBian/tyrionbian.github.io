@@ -55,3 +55,51 @@ and
 ${\bf w}^{\rm{T}}\phi({\bf x}) + b = -1$ (anything on or below this boundary is of the other class, with label −1).
 
 Geometrically, the distance between these two hyperplanes is computed using the distance from a point to a plane equation. It's $\frac {2}{\|{\vec {w}}\|}$, so to maximize the distance between the planes we want to minimize $\| \vec{w} \|$. The distance is computed using the distance from a point to a plane equation.
+
+#### 2. Why is the SVM margin equal to $\frac {2}{\| {\bf w} \|}$?
+
+###### method1:
+Let ${\bf x}_0$ be a point in the hyperplane ${\bf w}{\bf x} - b = -1$. So we get ${\bf w}{\bf x}_0 - b = -1$. The distance from ${\bf x}_0$ to hyperplanes ${\bf w}{\bf x} - b = 1$:
+\$$
+\begin{equation}
+ \begin{aligned}
+& \gamma = \frac{\| {\bf w}{\bf x}_0 - b - 1 \|}{\sqrt{\| w\|^2}} \newline
+\Longrightarrow &\gamma = \frac{\| -1 - 1 \|}{\| w\|} \newline
+\Longrightarrow &\gamma = \frac{2}{\| w\|} \newline
+ \end{aligned}
+\end{equation}
+$$
+
+###### method2:
+To measure the distance between hyperplanes ${\bf w}{\bf x} - b = -1$ and ${\bf w}{\bf x} - b = 1$, we only need to compute the perpendicular distance from ${\bf x}_0$ to plane ${\bf w}{\bf x} - b = 1$, denoted as $\gamma$.
+
+Note that $\frac{\bf w}{\| {\bf w} \|}$ is a unit normal vector of the hyperplane ${\bf w}{\bf x} - b = 1$. So ${\bf x}_0 + \gamma \frac{\bf w}{\| {\bf w} \|}$ should be a point in hyperplane ${\bf w}{\bf x} - b = 1$.
+\$$
+{\bf w}({\bf x}_0 + \gamma \frac{{\bf w}}{\| {\bf w} \|}) - b = 1
+$$
+
+Expanding this equation, we have
+\$$
+\begin{equation}
+ \begin{aligned}
+&{\bf w}{\bf x}_0 + \gamma \frac{{\bf w}{\bf w}}{\| {\bf w} \|} - b = 1 \newline
+\Longrightarrow &{\bf w}{\bf x}_0 + \gamma \frac{\| {\bf w} \|^2}{\| {\bf w} \|} - b = 1 \newline
+\Longrightarrow &{\bf w}{\bf x}_0 + \gamma {\| {\bf w} \|} - b = 1 \newline
+\Longrightarrow &{\bf w} {\bf x}_0 - b = 1 - \gamma {\| {\bf w} \|} \newline
+\Longrightarrow &-1 = 1 - \gamma {\| {\bf w} \|} \newline
+\Longrightarrow &\gamma = \frac{2}{\| {\bf w} \|} \newline
+ \end{aligned}
+\end{equation}
+$$
+
+The optimization problem then simply requires that we maximize ${\bf w}^{-1}$, which is equivalent to minimizing ${\bf w}^{2}$, and so we have to solve the optimization problem:
+\$$
+\begin{equation}
+ \begin{aligned}
+\underset{{\bf w},b}{\arg\min} &\quad \frac{1}{2}\| {\bf w}\| ^{2} \newline
+\text{s.t.}  &\quad t_i ({\bf w}^{\rm{T}}\phi({\bf x}^{(i)}) + b) \geqslant 1, \quad i = 1, ..., m
+ \end{aligned}
+\end{equation}
+$$
+
+The factor of $1/2$ is included for later convenience. This is an example of a **quadratic programming** problem in which we are tring to minimize a quadratic function subject to a set of linear inequality constraints. 
