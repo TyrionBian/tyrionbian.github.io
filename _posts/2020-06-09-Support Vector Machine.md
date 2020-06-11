@@ -82,6 +82,8 @@ Note that $\frac{w}{\Vert w \Vert}$ is a unit normal vector of the hyperplane ${
 \end{equation}
 $$
 
+Expanding this equation, we have
+
 #### 3. Lagrange multipliers
 We consider an optimization problem in the standard form:
 \$$
