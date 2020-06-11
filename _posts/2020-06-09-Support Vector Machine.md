@@ -100,7 +100,8 @@ The optimization problem then simply requires that we maximize ${\bf w}^{-1}$, w
 \$$
 \begin{equation}
  \begin{aligned}
-\text{s.t.}  \quad t_i ({\bf w}^{\rm{T}}\phi({\bf x}^{(i)}) + b) \geqslant 1, \quad i = 1, ..., m
+\underset{\bf w,b}{\arg\min} &\quad \frac{1}{2}{\Vert {\bf w} \Vert}^2 \newline
+\text{s.t.}  &\quad t_i ({\bf w}^{\rm{T}}\phi({\bf x}^{(i)}) + b) \geqslant 1, \quad i = 1, ..., m
  \end{aligned}
 \end{equation}
 $$
