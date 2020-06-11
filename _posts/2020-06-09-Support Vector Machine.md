@@ -133,17 +133,6 @@ Now we consider the quantity
 $$
 
 Here, the “$\mathcal P$” subscript stands for “primal”. We can write like this:
-\$$
-\begin{align*}
-  θ_{\mathcal P}(w)=  
-   \left\{ 
-     \begin{array}{ccc}
-      f(w) & \text{if w satisfies primal constraints} \newline
-      \infty & \text{otherwise}
-    \end{array} 
-   \right.
-\end{align*}
-$$
 
 \$$
 \begin{equation}
