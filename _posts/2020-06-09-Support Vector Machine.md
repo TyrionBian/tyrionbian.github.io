@@ -35,11 +35,11 @@ Maximum-margin hyperplane and margins for an SVM trained with samples from two c
 
 the distance of a point ${\bf x}_n$ to the hyperplane defined by $y({\bf x}) = 0$ is given by:
 \$$
-\frac{t_n y({\bf x})}{\| {\bf w} \|} = \frac{t_n ({\bf w}^{\rm{T}}\phi({\bf x}) + b)}{\| {\bf w} \|}
+\frac{t_n y({\bf x})}{\Vert {\bf w} \Vert} = \frac{t_n ({\bf w}^{\rm{T}}\phi({\bf x}) + b)}{\Vert {\bf w} \Vert}
 $$
 
 We note that if we make the rescaling $w → \kappa w$ and $b → \kappa b$,
-then the distance from any point xn to the decision surface, given by $t_n y({\bf x})/\| {\bf w} \|$ is unchanged. We can use this freedom to set:
+then the distance from any point xn to the decision surface, given by $t_n y({\bf x})/\Vert {\bf w} \Vert$ is unchanged. We can use this freedom to set:
 \$$
 t_n ({\bf w}^{\rm{T}}\phi({\bf x}) + b) = 1
 $$
@@ -54,38 +54,40 @@ ${\bf w}^{\rm{T}}\phi({\bf x}) + b = 1$ (anything on or above this boundary is o
 and
 ${\bf w}^{\rm{T}}\phi({\bf x}) + b = -1$ (anything on or below this boundary is of the other class, with label −1).
 
-Geometrically, the distance between these two hyperplanes is computed using the distance from a point to a plane equation. It's $\frac {2}{\|{\vec {w}}\|}$, so to maximize the distance between the planes we want to minimize $\| \vec{w} \|$. The distance is computed using the distance from a point to a plane equation.
+Geometrically, the distance between these two hyperplanes is computed using the distance from a point to a plane equation. It's $\frac {2}{\Vert{\vec {w}}\Vert}$, so to maximize the distance between the planes we want to minimize $\Vert \vec{w} \Vert$. The distance is computed using the distance from a point to a plane equation.
 
-#### 2. Why is the SVM margin equal to $\frac {2}{\| {\bf w} \|}$?
+#### 2. Why is the SVM margin equal to $\frac {2}{\Vert {\bf w} \Vert}$?
 
 ###### method1:
 Let ${\bf x}_0$ be a point in the hyperplane ${\bf w}{\bf x} - b = -1$. So we get ${\bf w}{\bf x}_0 - b = -1$. The distance from ${\bf x}_0$ to hyperplanes ${\bf w}{\bf x} - b = 1$:
 \$$
 \begin{equation}
  \begin{aligned}
-& \gamma = \frac{\| {\bf w}{\bf x}_0 - b - 1 \|}{\sqrt{\| w\|^2}} \newline
-\Longrightarrow &\gamma = \frac{\| -1 - 1 \|}{\| w\|} \newline
-\Longrightarrow &\gamma = \frac{2}{\| w\|} \newline
+& \gamma = \frac{\Vert {\bf w}{\bf x}_0 - b - 1 \Vert}{\sqrt{\Vert w\Vert^2}} \newline
+\Longrightarrow &\gamma = \frac{\Vert -1 - 1 \Vert}{\Vert w\Vert} \newline
+\Longrightarrow &\gamma = \frac{2}{\Vert w\Vert} \newline
  \end{aligned}
 \end{equation}
 $$
 
 ###### method2:
+To measure the distance between hyperplanes $wx - b = -1$ and $wx - b = 1$, we only need to compute the perpendicular distance from $x_0$ to plane $wx - b = 1$, denoted as $\gamma$.
 
+Note that $\frac{w}{\Vert w \Vert}$ is a unit normal vector of the hyperplane $wx - b = 1$. So $x_0 + \gamma \frac{w}{\Vert w \Vert}$ should be a point in hyperplane $wx - b = 1$.
 \$$
-{\bf w}({\bf x}_0 + \gamma \frac{{\bf w}}{\| {\bf w} \|}) - b = 1
+{\bf w}({\bf x}_0 + \gamma \frac{{\bf w}}{\Vert {\bf w} \Vert}) - b = 1
 $$
 
 Expanding this equation, we have
 \$$
 \begin{equation}
  \begin{aligned}
-&{\bf w}{\bf x}_0 + \gamma \frac{{\bf w}{\bf w}}{\| {\bf w} \|} - b = 1 \newline
-\Longrightarrow &{\bf w}{\bf x}_0 + \gamma \frac{\| {\bf w} \|^2}{\| {\bf w} \|} - b = 1 \newline
-\Longrightarrow &{\bf w}{\bf x}_0 + \gamma {\| {\bf w} \|} - b = 1 \newline
-\Longrightarrow &{\bf w} {\bf x}_0 - b = 1 - \gamma {\| {\bf w} \|} \newline
-\Longrightarrow &-1 = 1 - \gamma {\| {\bf w} \|} \newline
-\Longrightarrow &\gamma = \frac{2}{\| {\bf w} \|} \newline
+&{\bf w}{\bf x}_0 + \gamma \frac{{\bf w}{\bf w}}{\Vert {\bf w} \Vert} - b = 1 \newline
+\Longrightarrow &{\bf w}{\bf x}_0 + \gamma \frac{\Vert {\bf w} \Vert^2}{\Vert {\bf w} \Vert} - b = 1 \newline
+\Longrightarrow &{\bf w}{\bf x}_0 + \gamma {\Vert {\bf w} \Vert} - b = 1 \newline
+\Longrightarrow &{\bf w} {\bf x}_0 - b = 1 - \gamma {\Vert {\bf w} \Vert} \newline
+\Longrightarrow &-1 = 1 - \gamma {\Vert {\bf w} \Vert} \newline
+\Longrightarrow &\gamma = \frac{2}{\Vert {\bf w} \Vert} \newline
  \end{aligned}
 \end{equation}
 $$
@@ -94,7 +96,7 @@ The optimization problem then simply requires that we maximize ${\bf w}^{-1}$, w
 \$$
 \begin{equation}
  \begin{aligned}
-\underset{{\bf w},b}{\arg\min} &\quad \frac{1}{2}\| {\bf w}\| ^{2} \newline
+\underset{{\bf w},b}{\arg\min} &\quad \frac{1}{2}\Vert {\bf w}\Vert ^{2} \newline
 \text{s.t.}  &\quad t_i ({\bf w}^{\rm{T}}\phi({\bf x}^{(i)}) + b) \geqslant 1, \quad i = 1, ..., m
  \end{aligned}
 \end{equation}
