@@ -141,7 +141,7 @@ Here, the “$\mathcal P$” subscript stands for “primal”. We can write lik
 \begin{array}{lr}
 f(w) & \text{if w satisfies primal constraints} \newline
 \infty & \text{otherwise}
-\end{array} \right\}
+\end{array} \right.
  \end{aligned}
 \end{equation}
 $$
