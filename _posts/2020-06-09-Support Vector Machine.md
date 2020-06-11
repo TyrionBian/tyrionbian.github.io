@@ -71,19 +71,6 @@ Let ${\bf x}_0$ be a point in the hyperplane ${\bf w}{\bf x} - b = -1$. So we ge
 $$
 
 ###### method2:
-Expanding this equation, we have
-\$$
-\begin{equation}
- \begin{aligned}
-&{\bf w}{\bf x}_0 + \gamma \frac{{\bf w}{\bf w}}{\Vert {\bf w} \Vert} - b = 1 \newline
-\Longrightarrow &{\bf w}{\bf x}_0 + \gamma \frac{\Vert {\bf w} \Vert^2}{\Vert {\bf w} \Vert} - b = 1 \newline
-\Longrightarrow &{\bf w}{\bf x}_0 + \gamma {\Vert {\bf w} \Vert} - b = 1 \newline
-\Longrightarrow &{\bf w} {\bf x}_0 - b = 1 - \gamma {\Vert {\bf w} \Vert} \newline
-\Longrightarrow &-1 = 1 - \gamma {\Vert {\bf w} \Vert} \newline
-\Longrightarrow &\gamma = \frac{2}{\Vert {\bf w} \Vert} \newline
- \end{aligned}
-\end{equation}
-$$
 
 The optimization problem then simply requires that we maximize ${\bf w}^{-1}$, which is equivalent to minimizing ${\bf w}^{2}$, and so we have to solve the optimization problem:
 \$$
