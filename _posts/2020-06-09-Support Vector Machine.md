@@ -71,9 +71,7 @@ Let ${\bf x}_0$ be a point in the hyperplane ${\bf w}{\bf x} - b = -1$. So we ge
 $$
 
 ###### method2:
-To measure the distance between hyperplanes ${\bf w}{\bf x} - b = -1$ and ${\bf w}{\bf x} - b = 1$, we only need to compute the perpendicular distance from ${\bf x}_0$ to plane ${\bf w}{\bf x} - b = 1$, denoted as $\gamma$.
 
-Note that  is a unit normal vector of the hyperplane . So should be a point in hyperplane .
 \$$
 {\bf w}({\bf x}_0 + \gamma \frac{{\bf w}}{\| {\bf w} \|}) - b = 1
 $$
@@ -103,3 +101,86 @@ The optimization problem then simply requires that we maximize ${\bf w}^{-1}$, w
 $$
 
 The factor of $1/2$ is included for later convenience. This is an example of a **quadratic programming** problem in which we are tring to minimize a quadratic function subject to a set of linear inequality constraints. 
+
+#### 3. Lagrange multipliers
+We consider an optimization problem in the standard form:
+\$$
+\begin{equation}
+ \begin{aligned}
+\text{minimize} \quad &f_0(x) \newline
+\text{s.t.} \quad &f_i(x) \leqslant 0, \quad i = 1, ..., m \newline
+&h_i(x) = 0, \quad i = 1, ..., p
+ \end{aligned}
+\end{equation}
+$$
+
+with variable $x \in \mathbb R^n$.We define the Lagrangian $L : \mathbb R^n × \mathbb R^m × \mathbb R^p → \mathbb R$ associated with the problem (5.1) as:
+\$$
+L(x,α,β) = f_0(x) + \sum_{i=1}^m α_i f_i(x) + \sum_{i=1}^p β_i h_i(x),
+$$
+
+with **dom** $L = \mathcal D × \mathbb R^m × \mathbb R^p$.We refer to $α_i$ as the Lagrange multiplier associated with the ith inequality constraint $f_i(x) ≤ 0$; similarly we refer to $β_i$ as the Lagrange multiplier associated with the ith equality constraint $h_i(x) = 0$. The vectors $α$ and $β$ are called the dual variables or Lagrange multiplier vectors associated with the problem.
+
+Now we consider the quantity
+\$$
+θ_{\mathcal P}(w) = \underset{α,β : α_i≥0}{\max} L(w, α, β)
+$$
+
+Here, the “$\mathcal P$” subscript stands for “primal”. We can write like this:
+\$$
+θ_{\mathcal P}(w) = \left\{
+\begin{array}{lr}
+f(w) & \text{if $w$ satisfies primal constraints} \newline
+\infty & \text{otherwise}
+\end{array} \right.
+$$
+
+$θ_{\mathcal P}$ takes the same value as the objective in our problem for all values of w that satisfies the primal constraints, and is positive infinity if the constraints are violated. Hence, if we consider the minimization problem
+\$$
+\underset{w}{\min} θ_{\mathcal P}(w) = \underset{w}{\min} \underset{α,β : α_i≥0}{\max} L(w, α, β)
+$$
+
+we see that it is the same problem (i.e., and has the same solutions as) our original, primal problem. For later use, we also define the optimal value of the objective to be $p^∗ = \underset{w}{\min} θ_{\mathcal P}(w)$; we call this the **value** of the primal problem.
+
+Now, let’s look at a slightly different problem. We define
+\$$
+θ_{\mathcal D}(α, β) = \underset{w}{\min}L(w, α, β).
+$$
+
+Here, the “D” subscript stands for “dual.” Note also that whereas in the definition of $θ_{\mathcal P}$ we were optimizing (maximizing) with respect to $α, β$, here we are minimizing with respect to $w$.
+
+We can now pose the dual optimization problem:
+\$$
+\underset{α,β : α_i≥0}{\max} θ_{\mathcal D}(α, β) = \underset{α,β : α_i≥0}{\max} \underset{w}{\min}L(w, α, β)
+$$
+
+This is exactly the same as our primal problem shown above, except that the order of the “max” and the “min” are now exchanged. Optimal value of the dual problem’s objective to be $d^∗ = \underset{α,β : α_i≥0}{\max} θ_{\mathcal D}(w)$.
+
+How are the primal and the dual problems related? It can easily be shown that
+\$$
+d^* = \underset{α,β : α_i≥0}{\max} \underset{w}{\min}L(w, α, β) = \underset{w}{\min} \underset{α,β : α_i≥0}{\max} L(w, α, β) = p^*
+$$
+
+There must exist $w^∗, α^∗, β^∗$ so that $w^∗$ is the solution to the primal problem, $α^∗, β^∗$ are the solution to the dual problem, and moreover $p^∗ = d^∗ = L(w^∗, α^∗, β^∗)$. Moreover, $w^∗, α^∗$ and $β^∗$ satisfy the Karush-Kuhn-Tucker (KKT) conditions, which are as follows:
+\$$
+\begin{equation}
+ \begin{aligned}
+\frac{\partial}{\partial w_i}L(w^∗, α^∗, β^∗) & = 0, \quad i=1,...,n \newline
+\frac{\partial}{\partial β_i}L(w^∗, α^∗, β^∗) & = 0, \quad i=1,...,l \newline
+α_i^∗g_i(w^*) & = 0, \quad i=1,...,k \newline
+g_i(w^*) & \leq 0, \quad i=1,...,k \newline
+α_i^∗ & \geq 0, \quad i=1,...,k \newline
+ \end{aligned}
+\end{equation}
+$$
+
+
+### 3. Kernels
+### 4. Regularization and the non-separable case
+### 5. The SMO algorithm
+
+
+
+
+
+
