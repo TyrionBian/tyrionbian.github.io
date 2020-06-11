@@ -75,7 +75,11 @@ To measure the distance between hyperplanes ${\bf w}{\bf x} - b = -1$ and ${\bf 
 
 Note that $\frac{w}{\Vert w \Vert}$ is a unit normal vector of the hyperplane ${\bf w}{\bf x} - b = 1$. So ${\bf x}_0 + \gamma \frac{w}{\Vert w \Vert}$ should be a point in hyperplane ${\bf w}{\bf x} - b = 1$.
 \$$
+\begin{equation}
+ \begin{aligned}
 {\bf w}({\bf x}_0 + \gamma \frac{{\bf w}}{\Vert {\bf w} \Vert}) - b = 1
+ \end{aligned}
+\end{equation}
 $$
 
 #### 3. Lagrange multipliers
