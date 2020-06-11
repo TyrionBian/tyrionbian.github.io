@@ -71,9 +71,6 @@ Let ${\bf x}_0$ be a point in the hyperplane ${\bf w}{\bf x} - b = -1$. So we ge
 $$
 
 ###### method2:
-To measure the distance between hyperplanes $wx - b = -1$ and $wx - b = 1$, we only need to compute the perpendicular distance from $x_0$ to plane $wx - b = 1$, denoted as $\gamma$.
-
-Note that $\frac{w}{\Vert w \Vert}$ is a unit normal vector of the hyperplane $wx - b = 1$. So $x_0 + \gamma \frac{w}{\Vert w \Vert}$ should be a point in hyperplane $wx - b = 1$.
 \$$
 {\bf w}({\bf x}_0 + \gamma \frac{{\bf w}}{\Vert {\bf w} \Vert}) - b = 1
 $$
