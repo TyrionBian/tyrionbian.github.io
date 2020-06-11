@@ -77,7 +77,7 @@ Note that $\frac{w}{\Vert w \Vert}$ is a unit normal vector of the hyperplane ${
 \$$
 \begin{equation}
  \begin{aligned}
-{\bf w}({\bf x}_0 + \gamma \frac{{\bf w}}{\Vert {\bf w} \Vert}) - b = 1
+{\bf w}({\bf x}_0 + \gamma \frac{\bf w}{\Vert {\bf w} \Vert}) - b = 1
  \end{aligned}
 \end{equation}
 $$
