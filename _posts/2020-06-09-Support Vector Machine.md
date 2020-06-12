@@ -276,6 +276,7 @@ L(w,b,ξ,a,r) = \frac{1}{2}w^{\rm T}w + C sum_{i=1}^m ξ_i - sum_{i=1}^m a_i [y^
 $$
 
 Here, the $α_i$’s and $r_i$’s are our Lagrange multipliers (constrained to be $≥ 0$). We won’t go through the derivation of the dual again in detail, but after setting the derivatives with respect to $w$ and $b$ to zero as before, substituting them back in, and simplifying, we obtain the following dual form of the problem:  
+
 \$$
 \begin{equation}
  \begin{aligned}
