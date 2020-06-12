@@ -9,6 +9,9 @@ math:              true
 ---
 ## Support Vector Machine
 
+- TOC
+{:toc}
+
 To tell the SVM story, we’ll need to first talk about margins and the idea of separating data with a large “gap.” Next, we’ll talk about the optimal margin classifier, which will lead us into a digression on Lagrange duality. We’ll also see kernels, which give a way to apply SVMs efficiently in very high dimensional (such as infinitedimensional) feature spaces, and finally, we’ll close off the story with the SMO algorithm, which gives an efficient implementation of SVMs.
 ### 1. Margins
 We begin our discussion of support vector machines by returning to the two-class classification problem using linear models of the form:
