@@ -242,9 +242,44 @@ $$
 
 Here the kernel function is defined by $k(x, x') = \phi(x)^{\mathrm T} \phi(x')$. Again, this takes the form of a quadratic programming problem in which we optimize a quadratic function of a subject to a set of inequality constraints. 
 
+#### 5. non-separable case
+The derivation of the SVM as presented so far assumed that the data is **linearly separable**. While mapping data to a high dimensional feature space via $\phi$ does generally increase the likelihood that the data is separable, we
+can’t guarantee that it always will be so. Also, in some cases it is not clear that finding a separating hyperplane is exactly what we’d want to do, since that might be susceptible to outliers. For instance, the left figure below
+shows an optimal margin classifier, and when a single outlier is added in the upper-left region (right figure), it causes the decision boundary to make a dramatic swing, and the resulting classifier has a much smaller margin.
+
+<figure>
+   <img src="{{ "/images/linearly_separable.png" | absolute_url }}" />
+   <figcaption>linearly separable(from wikipedia)</figcaption>
+</figure>
 
 
+To make the algorithm work for non-linearly separable datasets as well as be less sensitive to outliers, we reformulate our optimization (using $ℓ1$ regularization) as follows:
+\$$
+\begin{equation}
+ \begin{aligned}
+\underset{\gamma,w,b}{\min} \quad & \frac{1}{2}{\Vert w \Vert}^2 + C \sum_{i=1}^m \xi_i \newline
+\text{s.t.} \quad & y^{(i)}(w^{\rm T} x^{(i)} + b) \ge 1
+& \xi_i \ge 0, \quad i=1, ..., m
+ \end{aligned}
+\end{equation}
+$$
 
+Thus, examples are now permitted to have (functional) margin less than 1, and if an example has functional margin $1 − ξ_i ($with $ξ > 0)$, we would pay a cost of the objective function being increased by $Cξ_i$. The parameter $C$ controls the relative weighting between the twin goals of making the $||w||^2$ small (which we saw earlier makes the margin large) and of ensuring that most examples have functional margin at least 1.
 
+As before, we can form the Lagrangian:
+\$$
+L(w,b,ξ,a,r) = \frac{1}{2}w^{\rm T}w + C sum_{i=1}^m ξ_i - sum_{i=1}^m a_i [y^{(i)}(x^{\rm T}w + b) - 1 + ξ_i] - \sum_{i=1}^m r_i ξ_i
+$$
 
+Here, the $α_i$’s and $r_i$’s are our Lagrange multipliers (constrained to be $≥ 0$). We won’t go through the derivation of the dual again in detail, but after setting the derivatives with respect to $w$ and $b$ to zero as before, substituting them back in, and simplifying, we obtain the following dual form of the problem:
+
+\$$
+\begin{equation}
+ \begin{aligned}
+{\max}_a & \quad \overset{\sim}L ({\bf a}) = \sum_{n=1}^N a_n - \frac{1}{2}\sum_{n=1}^N \sum_{m=1}^N a_n a_m t_n t_m k({\bf x}_n,{\bf x}_m) \newline
+\text{s.t.} & \quad 0 \le a_n \le C, \quad n=1, ..., N \newline
+& \quad \sum_{n=1}^N a_n t_n = 0
+ \end{aligned}
+\end{equation}
+$$
 
