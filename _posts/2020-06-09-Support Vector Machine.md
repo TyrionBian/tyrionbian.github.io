@@ -218,6 +218,7 @@ where ${\bf α}  = (\alpha_1, . . . , \alpha_N)^{\mathrm T}$. Note the minus sig
 $$
 
 we obtain the following two conditions:
+
 \$$
 \begin{equation}
  \begin{aligned}
@@ -228,6 +229,7 @@ we obtain the following two conditions:
 $$
 
 Eliminating ${\bf w}$ and b from $L({\bf w}, b, {\bf a})$ using these conditions then gives the dual representation of the maximum margin problem in which we maximize
+
 \$$
 \begin{equation}
  \begin{aligned}
