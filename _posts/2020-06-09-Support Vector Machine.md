@@ -272,7 +272,7 @@ Thus, examples are now permitted to have (functional) margin less than 1, and if
 
 As before, we can form the Lagrangian:
 \$$
-L(w,b,ξ,a,r) = \frac{1}{2}w^{\rm T}w + C sum_{i=1}^m ξ_i - sum_{i=1}^m a_i [y^{(i)}(x^{\rm T}w + b) - 1 + ξ_i] - \sum_{i=1}^m r_i ξ_i
+L(w,b,ξ,a,r) = \frac{1}{2}w^{\rm T}w + C \sum_{i=1}^m ξ_i - \sum_{i=1}^m a_i [y^{(i)}(x^{\rm T}w + b) - 1 + ξ_i] - \sum_{i=1}^m r_i ξ_i
 $$
 
 Here, the $α_i$’s and $r_i$’s are our Lagrange multipliers (constrained to be $≥ 0$). We won’t go through the derivation of the dual again in detail, but after setting the derivatives with respect to $w$ and $b$ to zero as before, substituting them back in, and simplifying, we obtain the following dual form of the problem:  
