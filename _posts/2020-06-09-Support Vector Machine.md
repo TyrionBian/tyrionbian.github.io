@@ -264,7 +264,7 @@ To make the algorithm work for non-linearly separable datasets as well as be les
 \end{equation}
 $$
 
-Thus, examples are now permitted to have (functional) margin less than 1, and if an example has functional margin $1 − ξ_i ($with $ξ > 0)$, we would pay a cost of the objective function being increased by $Cξ_i$. The parameter $C$ controls the relative weighting between the twin goals of making the $||w||^2$ small (which we saw earlier makes the margin large) and of ensuring that most examples have functional margin at least 1.
+Thus, examples are now permitted to have (functional) margin less than 1, and if an example has functional margin $1 − ξ_i ($with $ξ > 0)$, we would pay a cost of the objective function being increased by $Cξ_i$. The parameter $C$ controls the relative weighting between the twin goals of making the $\Vert w \Vert^2$ small (which we saw earlier makes the margin large) and of ensuring that most examples have functional margin at least 1.
 
 As before, we can form the Lagrangian:
 \$$
