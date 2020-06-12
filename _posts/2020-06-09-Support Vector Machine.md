@@ -186,10 +186,60 @@ g_i(w^*) & \leq 0, \quad i=1,...,k \newline
 \end{equation}
 $$
 
+#### 4. margin classifiers
+Previously, we posed the following (primal) optimization problem for finding the optimal margin classifier:
+\$$
+\begin{equation}
+ \begin{aligned}
+\underset{w,b}{\arg\min} &\quad \frac{1}{2}{\Vert {\bf w} \Vert}^2 \newline
+\text{s.t.}  &\quad t_i ({\bf w}^{\rm{T}}\phi({\bf x}^{(i)}) + b) \geqslant 1, \quad i = 1, ..., m
+ \end{aligned}
+\end{equation}
+$$
 
-### 3. Kernels
-### 4. Regularization and the non-separable case
-### 5. The SMO algorithm
+We can write the constraints as
+\$$
+g_i(w) = 1-t_n ({\bf w}^{\rm{T}}\phi({\bf x}^{(i)}) + b) \le 0
+$$
+
+When we construct the Lagrangian for our optimization problem we have:
+\$$
+L(w,β,α) = \frac{1}{2}{\Vert {\bf w} \Vert}^2 - \sum_{n=1}^N \alpha_n \{ t_n ({\bf w}^{\rm{T}}\phi({\bf x}^{(i)}) + b -1) \}
+$$
+
+where ${\bf α}  = (\alpha_1, . . . , \alpha_N)^{\mathrm T}$. Note the minus sign in front of the Lagrange multiplier term, because we are minimizing with respect to w and b, and maximizing with respect to a. Setting the derivatives of L(w, b, a) with respect to w and b equal to zero,
+\$$
+\begin{equation}
+ \begin{aligned}
+\nabla_w L(w,b,α) = {\bf w} - \sum_{n=1}^N \alpha_n t_n \phi({\bf x}^{(i)}) = 0 \newline
+\frac{\partial}{\partial b} L(w,b,α) = - \sum_{n=1}^N \alpha_n t_n = 0
+ \end{aligned}
+\end{equation}
+$$
+
+we obtain the following two conditions:
+\$$
+\begin{equation}
+ \begin{aligned}
+{\bf w} & = \sum_{n=1}^N a_n t_n \phi({\bf x}_n) \newline
+0 & = \sum_{n=1}^N a_n t_n
+ \end{aligned}
+\end{equation}
+$$
+
+Eliminating ${\bf w}$ and b from $L({\bf w}, b, {\bf a})$ using these conditions then gives the dual representation of the maximum margin problem in which we maximize
+\$$
+\begin{equation}
+ \begin{aligned}
+{\max}_a & \quad \overset{\sim}L ({\bf a}) = \sum_{n=1}^N a_n - \frac{1}{2}\sum_{n=1}^N \sum_{m=1}^N a_n a_m t_n t_m k({\bf x}_n,{\bf x}_m) \newline
+\text{s.t.} & \quad a_n \ge 0, \quad n=1, ..., N \newline
+& \quad \sum_{n=1}^N a_n t_n = 0
+ \end{aligned}
+\end{equation}
+$$
+
+Here the kernel function is defined by $k(x, x') = \phi(x)^{\mathrm T} \phi(x')$. Again, this takes the form of a quadratic programming problem in which we optimize a quadratic function of a subject to a set of inequality constraints. 
+
 
 
 
