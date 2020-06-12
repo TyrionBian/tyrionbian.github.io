@@ -7,10 +7,11 @@ category:          Machine Learning Basic
 author:            tianliang
 math:              true
 ---
-## Support Vector Machine
 
 - TOC
 {:toc}
+
+## Support Vector Machine
 
 To tell the SVM story, we’ll need to first talk about margins and the idea of separating data with a large “gap.” Next, we’ll talk about the optimal margin classifier, which will lead us into a digression on Lagrange duality. We’ll also see kernels, which give a way to apply SVMs efficiently in very high dimensional (such as infinitedimensional) feature spaces, and finally, we’ll close off the story with the SMO algorithm, which gives an efficient implementation of SVMs.
 ### 1. Margins
@@ -59,7 +60,7 @@ ${\bf w}^{\rm{T}}\phi({\bf x}) + b = -1$ (anything on or below this boundary is 
 
 Geometrically, the distance between these two hyperplanes is computed using the distance from a point to a plane equation. It's $\frac {2}{\Vert{\vec {w}}\Vert}$, so to maximize the distance between the planes we want to minimize $\Vert \vec{w} \Vert$. The distance is computed using the distance from a point to a plane equation.
 
-#### 2. Why is the SVM margin equal to $\frac {2}{\Vert \vec{w} \Vert}$?
+### 2. Why is the SVM margin equal to $\frac {2}{\Vert \vec{w} \Vert}$?
 
 ###### method1:
 Let ${\bf x}_0$ be a point in the hyperplane ${\bf w}{\bf x} - b = -1$. So we get ${\bf w}{\bf x}_0 - b = -1$. The distance from ${\bf x}_0$ to hyperplanes ${\bf w}{\bf x} - b = 1$:
@@ -111,7 +112,7 @@ $$
 
 The factor of $1/2$ is included for later convenience. This is an example of a **quadratic programming** problem in which we are tring to minimize a quadratic function subject to a set of linear inequality constraints. 
 
-#### 3. Lagrange multipliers
+### 3. Lagrange multipliers
 We consider an optimization problem in the standard form:
 \$$
 \begin{equation}
@@ -189,7 +190,7 @@ g_i(w^*) & \leq 0, \quad i=1,...,k \newline
 \end{equation}
 $$
 
-#### 4. margin classifiers
+### 4. margin classifiers
 Previously, we posed the following (primal) optimization problem for finding the optimal margin classifier:
 \$$
 \begin{equation}
@@ -245,7 +246,7 @@ $$
 
 Here the kernel function is defined by $k(x, x') = \phi(x)^{\mathrm T} \phi(x')$. Again, this takes the form of a quadratic programming problem in which we optimize a quadratic function of a subject to a set of inequality constraints. 
 
-#### 5. non-separable case
+### 5. non-separable case
 The derivation of the SVM as presented so far assumed that the data is **linearly separable**. While mapping data to a high dimensional feature space via $\phi$ does generally increase the likelihood that the data is separable, we
 can’t guarantee that it always will be so. Also, in some cases it is not clear that finding a separating hyperplane is exactly what we’d want to do, since that might be susceptible to outliers. For instance, the left figure below
 shows an optimal margin classifier, and when a single outlier is added in the upper-left region (right figure), it causes the decision boundary to make a dramatic swing, and the resulting classifier has a much smaller margin.
@@ -286,3 +287,6 @@ Here, the $α_i$’s and $r_i$’s are our Lagrange multipliers (constrained to 
 \end{equation}
 $$
 
+## Reference
+[1] [CS229: Machine Learning](http://cs229.stanford.edu/).
+[2] Bishop C M. Pattern recognition and machine learning[M]. springer, 2006.
