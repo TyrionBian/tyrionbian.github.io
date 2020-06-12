@@ -288,6 +288,5 @@ Here, the $α_i$’s and $r_i$’s are our Lagrange multipliers (constrained to 
 $$
 
 ## Reference
-[1] [CS229: Machine Learning](http://cs229.stanford.edu/).
-
-[2] Bishop C M. Pattern recognition and machine learning[M]. springer, 2006.
+[1] [CS229: Machine Learning](http://cs229.stanford.edu/).  
+[2] Bishop C M. Pattern recognition and machine learning[M]. springer, 2006.  
