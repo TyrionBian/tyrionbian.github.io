@@ -1,9 +1,8 @@
 tianliang:
     profile: "Research in machine learning, studying natural language processing, computer vision, etc. ."
     skills:
-        - "Python3, R, C++"
-        - "ML, DL, RL"
-        - "CV, NLP"
+        - "Programming language: Python3, R, C++"
+        - "Research areas: Application for Machine Learning & Deep Learning"
     education:
         - time:             "2013 - 2016"
           location:         "Jilin University"
