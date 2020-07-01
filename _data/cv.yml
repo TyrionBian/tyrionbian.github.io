@@ -3,7 +3,7 @@ tianliang:
     skills:
         - "Programming language: Python3, R, C++"
         - "Familiar ML frame&tools: sklearn, pytorch, keras, fastai, openAI gym"
-        - "Research areas: Application for Machine Learning & Deep Learning"
+        - "Research: Application for Machine Learning & Deep Learning"
     education:
         - time:             "2013 - 2016"
           location:         "Jilin University"
