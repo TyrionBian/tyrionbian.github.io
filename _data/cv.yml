@@ -2,6 +2,7 @@ tianliang:
     profile: "Research in machine learning, studying natural language processing, computer vision, etc. ."
     skills:
         - "Programming language: Python3, R, C++"
+        - "Familiar ML frame&tools: sklearn, pytorch, keras, fastai, openAI gym"
         - "Research areas: Application for Machine Learning & Deep Learning"
     education:
         - time:             "2013 - 2016"
