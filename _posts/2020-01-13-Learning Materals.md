@@ -27,14 +27,15 @@ math:              true
 * [Dive into Deep Learning](http://d2l.ai/)
 * [Speech and Language Processing (draft)](https://web.stanford.edu/~jurafsky/slp3/)
 * [NLTK book](https://www.nltk.org/book/)
+* [Fast AI course](https://course.fast.ai/)
 
 
 
 ## 2. Lectures & Videos
 
-* [Machine Learning (Stanford CS229)](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU) | [Course website](http://cs229.stanford.edu/syllabus-autumn2018.html)
-* [Convolutional Neural Networks for Visual Recognition (Stanford CS231n)](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) | [Course website](https://cs231n.github.io/)
-* [Introduction to Artificial Intelligence (UC Berkeley CS188)](https://www.youtube.com/playlist?list=PL7k0r4t5c108AZRwfW-FhnkZ0sCKBChLH) | [Course website](https://inst.eecs.berkeley.edu/~cs188/fa18/index.html)
+* [Machine Learning (Stanford CS229)](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU) \| [Course website](http://cs229.stanford.edu/syllabus-autumn2018.html)
+* [Convolutional Neural Networks for Visual Recognition (Stanford CS231n)](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) \| [Course website](https://cs231n.github.io/)
+* [Introduction to Artificial Intelligence (UC Berkeley CS188)](https://www.youtube.com/playlist?list=PL7k0r4t5c108AZRwfW-FhnkZ0sCKBChLH) \| [Course website](https://inst.eecs.berkeley.edu/~cs188/fa18/index.html)
 * [Applied Machine Learning 2020 (Columbia)](https://www.youtube.com/playlist?list=PL_pVmAaAnxIRnSw6wiCpSvshFyCREZmlM)
 * [Introduction to Reinforcement learning with David Silver (DeepMind)](https://www.youtube.com/playlist?list=PLqYmG7hTraZBiG_XpjnPrSNw-1XQaM_gB) | [Course website](https://www.davidsilver.uk/teaching/)
 * [Natural Language Processing with Deep Learning (Stanford CS224N)](https://www.youtube.com/playlist?list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z) | [Course website](http://web.stanford.edu/class/cs224n/)
