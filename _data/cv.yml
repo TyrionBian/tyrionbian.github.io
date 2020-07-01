@@ -33,6 +33,15 @@ tianliang:
             - "Build credit risk model"
             - "Application of artificial intelligence algorithm"
     projects:
+        - time:             "21 Des 2019"
+          title:            "modelling"
+          url:              "https://github.com/TyrionBian/modelling"
+          describe:         "modelling tools, include feature engineering, algorithms, evaluation, visualization."
+          technologies:     "sklearn, seaborn, xgboost, lightgbm, keras"
+          responsibilities:
+            - "interface层: Responsible for external interaction, the input parameter is json, converted to the corresponding algorithm service demand, and the corresponding algorithm service is called."
+            - "service层: Divided into two parts according to function:1. The main interface of the algorithm service, responsible for function distribution, calling the relevant encoder for calculation;2. Algorithm Service Independent Components（encoder）."
+            - "reporting层: Eventually all report content of each module will be synthesized into all_report.xlsx"
         - time:             "07 Jan 2020"
           title:            "Application system"
           url:              "https://github.com/TyrionBian/appSys"
