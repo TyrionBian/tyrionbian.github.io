@@ -1,7 +1,7 @@
 ---
 layout:            post
 title:             "Learning Materals"
-date:              2020-01-09
+date:              2020-01-13
 tag:               Machine Learning Basic
 category:          Machine Learning Basic
 author:            tianliang
@@ -11,7 +11,7 @@ math:              true
 - TOC
 {:toc}
 
-## Blogs
+## 1. Blogs
 * [Machine Learning Blog, ML@CMU, Carnegie Mellon University](https://blog.ml.cmu.edu/)
 * [Dstill](https://distill.pub/)
 * [Google AI Blog](https://ai.googleblog.com/)
@@ -25,7 +25,7 @@ math:              true
 * [Medium at towards data science](https://towardsdatascience.com/)
 
 
-## Lectures
+## 2. Lectures
 
 * [Machine Learning (Stanford CS229)](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU) | [Course website](http://cs229.stanford.edu/syllabus-autumn2018.html)
 * [Convolutional Neural Networks for Visual Recognition (Stanford CS231n)](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) | [Course website](https://cs231n.github.io/)
@@ -34,7 +34,7 @@ math:              true
 * [Introduction to Reinforcement learning with David Silver (DeepMind)](https://www.youtube.com/playlist?list=PLqYmG7hTraZBiG_XpjnPrSNw-1XQaM_gB) | [Course website](https://www.davidsilver.uk/teaching/)
 * [Natural Language Processing with Deep Learning (Stanford CS224N)](https://www.youtube.com/playlist?list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z) | [Course website](http://web.stanford.edu/class/cs224n/)
 
-## Advanced Lectures
+## 3. Advanced Lectures
 
 * [Deep Unsupervised Learning (UC Berkeley CS294)](https://www.youtube.com/channel/UCf4SX8kAZM_oGcZjMREsU9w/videos) | [Course website](https://sites.google.com/view/berkeley-cs294-158-sp19/home)
 
