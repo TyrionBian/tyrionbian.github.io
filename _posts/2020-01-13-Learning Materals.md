@@ -11,7 +11,7 @@ math:              true
 - TOC
 {:toc}
 
-## 1. Blogs
+## 1. Blogs And Materals
 * [Machine Learning Blog, ML@CMU, Carnegie Mellon University](https://blog.ml.cmu.edu/)
 * [Dstill](https://distill.pub/)
 * [Google AI Blog](https://ai.googleblog.com/)
@@ -22,10 +22,15 @@ math:              true
 * [Open AI](https://openai.com/blog/)
 * [DeepMind Blog](https://deepmind.com/blog)
 * [colah's blog](https://colah.github.io/)
+* [Hunch's Machine learning theory](https://hunch.net/)
 * [Medium at towards data science](https://towardsdatascience.com/)
+* [Dive into Deep Learning](http://d2l.ai/)
+* [Speech and Language Processing (draft)](https://web.stanford.edu/~jurafsky/slp3/)
+* [NLTK book](https://www.nltk.org/book/)
 
 
-## 2. Lectures
+
+## 2. Lectures & Videos
 
 * [Machine Learning (Stanford CS229)](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU) | [Course website](http://cs229.stanford.edu/syllabus-autumn2018.html)
 * [Convolutional Neural Networks for Visual Recognition (Stanford CS231n)](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) | [Course website](https://cs231n.github.io/)
@@ -37,51 +42,27 @@ math:              true
 ## 3. Advanced Lectures
 
 * [Deep Unsupervised Learning (UC Berkeley CS294)](https://www.youtube.com/channel/UCf4SX8kAZM_oGcZjMREsU9w/videos) | [Course website](https://sites.google.com/view/berkeley-cs294-158-sp19/home)
-
 * [Frontiers of Deep Learning (Simons Institute)](https://www.youtube.com/playlist?list=PLgKuh-lKre11ekU7g-Z_qsvjDD8cT-hi9) | [Course website](https://simons.berkeley.edu/workshops/dl2019-1)
-
 * [New Deep Learning Techniques](https://www.youtube.com/playlist?list=PLHyI3Fbmv0SdM0zXj31HWjG9t9Q0v2xYN) | [Course website](http://www.ipam.ucla.edu/programs/workshops/new-deep-learning-techniques/?tab=overview)
-
 * [Geometry of Deep Learning (Microsoft Research)](https://www.youtube.com/playlist?list=PLD7HFcN7LXRe30qq36It2XCljxc340O_d) | [Course website](https://www.microsoft.com/en-us/research/event/ai-institute-2019/)
-
 * [Deep Multi-Task and Meta Learning (Stanford CS330)](https://www.youtube.com/playlist?list=PLoROMvodv4rMC6zfYmnD7UG3LVvwaITY5) | [Course Website](http://cs330.stanford.edu/)
-
 * [Mathematics of Machine Learning Summer School 2019 (University of Washington)](https://www.youtube.com/playlist?list=PLTPQEx-31JXhguCush5J7OGnEORofoCW9) | [Course Website](http://mathofml.cs.washington.edu/)
-
 * [Probabilistic Graphical Models (Carneggie Mellon University)](https://www.youtube.com/playlist?list=PLoZgVqqHOumTY2CAQHL45tQp6kmDnDcqn) | [Course Website](https://sailinglab.github.io/pgm-spring-2019/)
-
 * [Probabilistic and Statistical Machine Learning 2020 (University of Tübingen)](https://www.youtube.com/playlist?list=PL05umP7R6ij1tHaOFY96m5uX3J21a6yNd)
-
 * [Statistical Machine Learning 2020 (University of Tübingen)](https://www.youtube.com/playlist?list=PL05umP7R6ij2XCvrRzLokX6EoHWaGA2cC)
-
 * [Mobile Sensing and Robotics 2019 (Bonn University)](https://www.youtube.com/playlist?list=PLgnQpQtFTOGQJXx-x0t23RmRbjp_yMb4v)
-
 * [Sensors and State Estimation Course 2020 (Bonn University)](https://www.youtube.com/playlist?list=PLgnQpQtFTOGQh_J16IMwDlji18SWQ2PZ6)
-
 * [Photogrammetry 2015 (Bonn University)](https://www.youtube.com/playlist?list=PLgnQpQtFTOGRsi5vzy9PiQpNWHjq-bKN1)
-
 * [Advanced Deep Learning & Reinforcement Learning 2020 (DeepMind / UCL)](https://www.youtube.com/playlist?list=PLqYmG7hTraZDNJre23vqCGIVpfZ_K2RZs)
-
 * [Data-Driven Dynamical Systems with Machine Learning](https://www.youtube.com/playlist?list=PLMrJAkhIeNNR6DzT17-MM1GHLkuYVjhyt)
-
 * [Data-Driven Control with Machine Learning](https://www.youtube.com/playlist?list=PLMrJAkhIeNNQkv98vuPjO2X2qJO_UPeWR)
-
 * [ECE AI Seminar Series 2020 (NYU)](https://www.youtube.com/playlist?list=PLhwo5ntex8iY9xhpSwWas451NgVuqBE7U)
-
 * [CS287 Advanced Robotics at UC Berkeley Fall 2019](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjNBPJdt8WamRAt4XKc639wF)
-
 * [CSEP 546 - Machine Learning (AU 2019) (U of Washington)](https://www.youtube.com/playlist?list=PLTPQEx-31JXj87XLsYutYGKw6K9dNaD36)
-
 * [Deep Reinforcment Learning, Decision Making and Control (UC Berkeley CS285)](https://www.youtube.com/playlist?list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A)
-
 * [Stanford Convex Optimization](https://www.youtube.com/playlist?list=PLdrixi40lpQm5ksInXlRon1eRwq_gzIcw)
-
 * [Stanford CS224U: Natural Language Understanding | Spring 2019](https://www.youtube.com/playlist?list=PLoROMvodv4rObpMCir6rNNUlFAn56Js20)
-
 * [Full Stack Deep Learning 2019](https://www.youtube.com/playlist?list=PL1T8fO7ArWlcf3Hc4VMEVBlH8HZm_NbeB)
-
 * [Emerging Challenges in Deep Learning](https://www.youtube.com/playlist?list=PLgKuh-lKre10BpafDrv0fg2VNUweWXWVd)
-
 * [Deep|Bayes 2019 Summer School](https://www.youtube.com/playlist?list=PLe5rNUydzV9QHe8VDStpU0o8Yp63OecdW)
-
 * [CMU Neural Nets for NLP 2020](https://www.youtube.com/playlist?list=PL8PYTP1V4I8CJ7nMxMC8aXv8WqKYwj-aJ)
