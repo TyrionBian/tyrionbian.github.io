@@ -7,7 +7,7 @@ category:          Machine Learning Basic
 author:            tianliang
 math:              true
 ---
-
+update time: 2020-09-10
 - TOC
 {:toc}
 
@@ -28,6 +28,7 @@ math:              true
 * [Speech and Language Processing (draft)](https://web.stanford.edu/~jurafsky/slp3/)
 * [NLTK book](https://www.nltk.org/book/)
 * [Fast AI course](https://course.fast.ai/)
+* [Computer Vision: Algorithms and Applications, 2nd ed](http://szeliski.org/Book/)
 
 
 
