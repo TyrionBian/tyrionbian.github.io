@@ -36,7 +36,7 @@ If $f$ has derivatives of all orders in an open interval $I$ containing $a$, the
 \$$
 \begin{equation}
  \begin{aligned}
-f(x) = f(a) &+ f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2  + \cdots  \newline
+f(x) = f(a) &+ f'(a)(x-a) + \frac{f\'\'(a)}{2!}(x-a)^2  + \cdots  \newline
 &+ \frac{f^{(n)}(x-a)}{n!}(x-a)^n + R_n(x);
  \end{aligned}
 \end{equation}
