@@ -32,8 +32,7 @@ $$
 When we apply Taylor’s Theorem, we usually want to hold a fixed and treat b as an independent variable. Taylor’s formula is easier to use in circumstances like these if we change b to x. Here is a version of the theorem with this change.
 
 **Taylor’s Formula**  
-If $f$ has derivatives of all orders in an open interval $I$ containing $a$, then for each positive integer $n$ and for each $x$ in $I$,
-
+If $f$ has derivatives of all orders in an open interval $I$ containing $a$, then for each positive integer $n$ and for each $x$ in $I$, 
 \$$
 \begin{equation}
  \begin{aligned}
