@@ -136,8 +136,7 @@ Now we consider the quantity
 θ_{\mathcal P}(w) = \underset{α,β : α_i≥0}{\max} L(w, α, β)
 $$
 
-Here, the “$\mathcal P$” subscript stands for “primal”. We can write like this
-
+Here, the “$\mathcal P$” subscript stands for “primal”. We can write like this 
 \$$
 \begin{equation}
  \begin{aligned}
@@ -221,8 +220,7 @@ where ${\bf α}  = (\alpha_1, . . . , \alpha_N)^{\mathrm T}$. Note the minus sig
 \end{equation}
 $$
 
-we obtain the following two conditions:
-
+we obtain the following two conditions: 
 \$$
 \begin{equation}
  \begin{aligned}
@@ -232,8 +230,7 @@ we obtain the following two conditions:
 \end{equation}
 $$
 
-Eliminating ${\bf w}$ and b from $L({\bf w}, b, {\bf a})$ using these conditions then gives the dual representation of the maximum margin problem in which we maximize
-
+Eliminating ${\bf w}$ and b from $L({\bf w}, b, {\bf a})$ using these conditions then gives the dual representation of the maximum margin problem in which we maximize 
 \$$
 \begin{equation}
  \begin{aligned}
@@ -275,8 +272,7 @@ As before, we can form the Lagrangian:
 L(w,b,ξ,a,r) = \frac{1}{2}w^{\rm T}w + C \sum_{i=1}^m ξ_i - \sum_{i=1}^m a_i [y^{(i)}(x^{\rm T}w + b) - 1 + ξ_i] - \sum_{i=1}^m r_i ξ_i
 $$
 
-Here, the $α_i$’s and $r_i$’s are our Lagrange multipliers (constrained to be $≥ 0$). We won’t go through the derivation of the dual again in detail, but after setting the derivatives with respect to $w$ and $b$ to zero as before, substituting them back in, and simplifying, we obtain the following dual form of the problem:  
-
+Here, the $α_i$’s and $r_i$’s are our Lagrange multipliers (constrained to be $≥ 0$). We won’t go through the derivation of the dual again in detail, but after setting the derivatives with respect to $w$ and $b$ to zero as before, substituting them back in, and simplifying, we obtain the following dual form of the problem: 
 \$$
 \begin{equation}
  \begin{aligned}
