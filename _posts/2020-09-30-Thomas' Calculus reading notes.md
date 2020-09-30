@@ -9,10 +9,12 @@ math:              true
 ---
 
 
+# Thomas' Calculus, 13th Edition with SI Units by George B. Thomas
+
+
 - TOC
 {:toc}
 
-# Thomas' Calculus, 13th Edition with SI Units by George B. Thomas
 
 ## Chapter 10  
 ### Taylor and Maclaurin Series
