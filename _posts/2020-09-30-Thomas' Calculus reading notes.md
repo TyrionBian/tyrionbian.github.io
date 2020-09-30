@@ -33,6 +33,7 @@ When we apply Taylor’s Theorem, we usually want to hold a fixed and treat b as
 
 **Taylor’s Formula**  
 If $f$ has derivatives of all orders in an open interval $I$ containing $a$, then for each positive integer $n$ and for each $x$ in $I$,
+
 \$$
 \begin{equation}
  \begin{aligned}
@@ -41,7 +42,9 @@ f(x) = f(a) &+ f'(a)(x-a) + \frac{f\'\'(a)}{2!}(x-a)^2  + \cdots  \newline
  \end{aligned}
 \end{equation}
 $$
+
 where
+
 \$$
 \begin{equation}
  \begin{aligned}
