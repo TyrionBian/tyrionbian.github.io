@@ -42,8 +42,7 @@ f(x) = f(a) &+ f'(a)(x-a) + \frac{f\'\'(a)}{2!}(x-a)^2  + \cdots  \newline
 \end{equation}
 $$
 
-where
-
+where 
 \$$
 \begin{equation}
  \begin{aligned}
