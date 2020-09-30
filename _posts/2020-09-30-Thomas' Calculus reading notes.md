@@ -21,7 +21,7 @@ Let $f$ be a function with derivatives of all orders throughout some interval co
 \$$
 \begin{equation}
  \begin{aligned}
-\sum_{k=0}^{\infty} \frac{f^{(k)}(a)}{k!}(x-a)^k = f(a) &+ f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2  \newline
+\sum_{k=0}^{\infty} \frac{f^{(k)}(a)}{k!}(x-a)^k = f(a) &+ f'(a)(x-a) + \frac{f\'\'(a)}{2!}(x-a)^2  \newline
 &+ \cdots + \frac {f^{(n)}(x-a)}{n!}(x-a)^n + \cdots ;
  \end{aligned}
 \end{equation}
